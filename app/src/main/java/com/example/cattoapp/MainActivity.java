@@ -1,7 +1,7 @@
 package com.example.cattoapp;
 
+import com.example.cattoapp.controller.MainController;
 import com.example.cattoapp.model.CatBreed;
-import com.example.cattoapp.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,13 +12,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.Window;
-import android.view.animation.Animation;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class MainActivity extends Activity {
@@ -28,7 +27,8 @@ public class MainActivity extends Activity {
     private RecyclerView.LayoutManager layoutManager;
     private ProgressBar loader;
     private MainController controller;
-    private Context context;
+    private Integer counter = 0;
+    private Random rand = new Random();
 
 
     @Override
@@ -38,12 +38,19 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final MediaPlayer catSound = MediaPlayer.create(getApplicationContext(), R.raw.cat_meow);
+        final MediaPlayer[] sounds = {
+                MediaPlayer.create(getApplicationContext(), R.raw.cat_meow),
+                MediaPlayer.create(getApplicationContext(), R.raw.nyancat),
+                MediaPlayer.create(getApplicationContext(), R.raw.cat_meow2),
+                MediaPlayer.create(getApplicationContext(), R.raw.bongo_cat),
+        };
         FloatingActionButton playCatSound = (FloatingActionButton) this.findViewById(R.id.buttonSound);
+
         playCatSound.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
-                catSound.start();
+            public void onClick(View v) {
+
+                sounds[rand.nextInt(sounds.length)].start();
             }
         });
 
