@@ -7,5 +7,9 @@
     <color name="rowTextcolor">#000000</color>
     <color name="detailBackground">#FAF9F8</color>
 
-    <color name="buttonBackgroun">#000000</color>
+    <color name="buttonBackground">#000000</color>
+
+    <color name="imageActivityBackground">#3F51B5</color>
+
+    <color name="imagetxt">#000000</color>
 </resources>

@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
+                Toast.makeText(getApplicationContext(), "MEOW ! (Sound on)", Toast.LENGTH_SHORT).show();
                 sounds[rand.nextInt(sounds.length)].start();
             }
         });
@@ -60,9 +61,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Random Kitty Image !", Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(getApplicationContext(), ImageActivity.class);
-                //intent.putExtra("detail_description",  item.getDescription());
                 getApplicationContext().startActivity(intent);
             }
         });

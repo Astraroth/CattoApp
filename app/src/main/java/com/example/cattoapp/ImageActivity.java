@@ -40,18 +40,18 @@ public class ImageActivity extends Activity {
             //setText(detaildescription, detailtemperament);
         }
     }
-    private void setText(String image_url){
+    /*private void setText(String image_url){
 
         TextView url = findViewById(R.id.url);
         url.setText(image_url);
 
-    }
+    }*/
 
     public void showImg(String url){
 
         ImageView image = findViewById(R.id.catImage);
-        TextView urlTxt = findViewById(R.id.imageUrl);
-        urlTxt.setText(url);
+        //TextView urlTxt = findViewById(R.id.imageUrl);
+        //urlTxt.setText(url);
         Picasso.with(getApplicationContext()).load(url).into(image);
 
     }

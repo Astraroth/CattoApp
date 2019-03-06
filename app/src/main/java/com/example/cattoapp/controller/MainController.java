@@ -1,11 +1,7 @@
 package com.example.cattoapp.controller;
 
-import android.app.Activity;
 import android.util.Log;
 
-import com.example.cattoapp.DetailsActivity;
-import com.example.cattoapp.model.CatImage;
-import com.example.cattoapp.model.CatImageApi;
 import com.example.cattoapp.model.CatRestApi;
 import com.example.cattoapp.MainActivity;
 import com.example.cattoapp.model.CatBreed;

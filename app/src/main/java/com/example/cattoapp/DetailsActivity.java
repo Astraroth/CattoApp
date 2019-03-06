@@ -12,7 +12,6 @@ import com.squareup.picasso.Picasso;
 public class DetailsActivity extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -45,13 +44,13 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
-   public void showImg(String url){
+   /*public void showImg(String url){
 
         ImageView image = findViewById(R.id.detailimage);
-        TextView urlTxt = findViewById(R.id.url);
-        urlTxt.setText(url);
+        //TextView urlTxt = findViewById(R.id.url);
+        //urlTxt.setText(url);
         Picasso.with(getApplicationContext()).load(url).into(image);
 
-    }
+    }*/
 
 }
