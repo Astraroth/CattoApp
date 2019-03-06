@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Window;
 import android.widget.TextView;
 
+import com.example.cattoapp.controller.DetailsController;
+
 public class DetailsActivity extends AppCompatActivity {
+
+    private DetailsController controller;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -16,6 +19,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_details);
         getIncomingIntent();
+
+        controller = new DetailsController(this);
+        controller.onCreate();
 
     }
 
@@ -27,11 +33,11 @@ public class DetailsActivity extends AppCompatActivity {
 
             String detaildescription = getIntent().getStringExtra("detail_description");
             String detailtemperament = getIntent().getStringExtra("detail_temperament");
-            setImage(detaildescription, detailtemperament);
+            setText(detaildescription, detailtemperament);
         }
     }
 
-    private void setImage(String detail_description, String detail_temperament){
+    private void setText(String detail_description, String detail_temperament){
 
         TextView description = findViewById(R.id.description);
         description.setText(detail_description);
@@ -39,7 +45,13 @@ public class DetailsActivity extends AppCompatActivity {
         TextView temperament = findViewById(R.id.temperament);
         temperament.setText(detail_temperament);
 
+    }
 
+   public void showImg(String url){
+
+        TextView description = findViewById(R.id.url);
+        description.setText(url);
 
     }
+
 }

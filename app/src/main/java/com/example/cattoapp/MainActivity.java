@@ -2,6 +2,7 @@ package com.example.cattoapp;
 
 import com.example.cattoapp.controller.MainController;
 import com.example.cattoapp.model.CatBreed;
+import com.example.cattoapp.model.CatImage;
 
 import android.app.Activity;
 import android.content.Context;
@@ -94,5 +95,6 @@ public class MainActivity extends Activity {
         recyclerView.setAdapter(mAdapter);
 
     }
+
 
 }

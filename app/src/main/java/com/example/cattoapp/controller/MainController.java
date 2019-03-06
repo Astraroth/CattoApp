@@ -1,7 +1,13 @@
-package com.example.cattoapp;
+package com.example.cattoapp.controller;
 
+import android.app.Activity;
 import android.util.Log;
 
+import com.example.cattoapp.DetailsActivity;
+import com.example.cattoapp.model.CatImage;
+import com.example.cattoapp.model.CatImageApi;
+import com.example.cattoapp.model.CatRestApi;
+import com.example.cattoapp.MainActivity;
 import com.example.cattoapp.model.CatBreed;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -42,9 +48,8 @@ public class MainController {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        //On crée notre interface PokemonRestApi
+        //On crée notre interface
         CatRestApi catRestApi = retrofit.create(CatRestApi.class);
-
         //On récupére un objet call.
         Call<List<CatBreed>> call = catRestApi.getListCatBreeds();
 
@@ -62,10 +67,8 @@ public class MainController {
                 Log.d("Erreur", "API ERROR");
             }
         });
+
     }
 
-    //public void onItemClicked(Pokemon itemClicked){
-
-    //}
 }
 

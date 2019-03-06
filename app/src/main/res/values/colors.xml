@@ -6,4 +6,6 @@
 
     <color name="rowTextcolor">#000000</color>
     <color name="detailBackground">#FAF9F8</color>
+
+    <color name="buttonBackgroun">#000000</color>
 </resources>
