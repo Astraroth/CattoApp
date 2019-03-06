@@ -1,12 +1,15 @@
 package com.example.cattoapp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cattoapp.controller.DetailsController;
+import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -47,10 +50,14 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
+
+
    public void showImg(String url){
 
-        TextView description = findViewById(R.id.url);
-        description.setText(url);
+        ImageView image = findViewById(R.id.detailimage);
+        TextView urlTxt = findViewById(R.id.url);
+        urlTxt.setText(url);
+        Picasso.with(getApplicationContext()).load(url).into(image);
 
     }
 

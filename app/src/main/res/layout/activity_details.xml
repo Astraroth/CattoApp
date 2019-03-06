@@ -41,7 +41,7 @@
         android:layout_height="350dp"
         android:layout_marginBottom="381dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/birman"
+        android:src="@drawable/nyancaticon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
