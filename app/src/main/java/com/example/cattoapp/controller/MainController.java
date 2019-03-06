@@ -25,7 +25,6 @@ public class MainController {
     private final MainActivity mainActivity;
     private static MainController instance = null;
 
-    //Exemple Singleton
     public static MainController getInstance(MainActivity mainActivity){
         if(instance == null){
             instance = new MainController(mainActivity);
@@ -40,17 +39,15 @@ public class MainController {
     public void onCreate() {
 
         mainActivity.showLoader();
+
         Gson gson = new GsonBuilder().setLenient().create();
 
-        //On crée un objet retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.thecatapi.com/v1/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        //On crée notre interface
         CatRestApi catRestApi = retrofit.create(CatRestApi.class);
-        //On récupére un objet call.
         Call<List<CatBreed>> call = catRestApi.getListCatBreeds();
 
         call.enqueue(new Callback<List<CatBreed>>() {

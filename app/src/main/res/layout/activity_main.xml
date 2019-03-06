@@ -25,13 +25,23 @@
 
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/buttonSound"
+    android:id="@+id/buttonSound"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|end"
+    android:layout_margin="16dp"
+    android:clickable="true"
+    android:src="@drawable/catmeow"
+    app:backgroundTint="@color/buttonBackgroun" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/buttonImage"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|end"
+        android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:clickable="true"
-        android:src="@drawable/catmeow"
+        android:src="@drawable/catmeow2"
         app:backgroundTint="@color/buttonBackgroun" />
 
 

@@ -35,7 +35,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -52,6 +51,19 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 sounds[rand.nextInt(sounds.length)].start();
+            }
+        });
+
+
+        FloatingActionButton playCatImage = (FloatingActionButton) this.findViewById(R.id.buttonImage);
+        playCatImage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Random Kitty Image !", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), ImageActivity.class);
+                //intent.putExtra("detail_description",  item.getDescription());
+                getApplicationContext().startActivity(intent);
             }
         });
 

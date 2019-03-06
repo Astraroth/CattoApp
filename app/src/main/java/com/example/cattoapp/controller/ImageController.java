@@ -1,14 +1,11 @@
+
 package com.example.cattoapp.controller;
 
-import android.app.Activity;
 import android.util.Log;
 
-import com.example.cattoapp.DetailsActivity;
+import com.example.cattoapp.ImageActivity;
 import com.example.cattoapp.model.CatImage;
-import com.example.cattoapp.model.CatImageApi;
 import com.example.cattoapp.model.CatRestApi;
-import com.example.cattoapp.MainActivity;
-import com.example.cattoapp.model.CatBreed;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -20,21 +17,23 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DetailsController {
+public class ImageController {
 
-    private final DetailsActivity detailsActivity;
-    private static DetailsController instance = null;
+    //private final DetailsActivity detailsActivity;
+    private final ImageActivity imageActivity;
+
+    private static ImageController instance = null;
 
     //Exemple Singleton
-    public static DetailsController getInstance(DetailsActivity detailsActivity){
-        if(instance == null){
-            instance = new DetailsController(detailsActivity);
+    public static ImageController getInstance(ImageActivity imageActivity) {
+        if (instance == null) {
+            instance = new ImageController(imageActivity);
         }
         return instance;
     }
 
-    public DetailsController(DetailsActivity detailsActivity) {
-        this.detailsActivity = detailsActivity;
+    public ImageController(ImageActivity imageActivity) {
+        this.imageActivity = imageActivity;
     }
 
     public void onCreate() {
@@ -45,13 +44,13 @@ public class DetailsController {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.thecatapi.com/v1/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
-              .build();
+                .build();
 
         //On crée notre interface
         CatRestApi catRestApi = retrofit.create(CatRestApi.class);
 
-        CatImageApi catImageApi = retrofit.create(CatImageApi.class);
-        Call<List<CatImage>> call2 = catRestApi.getCatImageById("breed_id");
+        //CatImageApi catImageApi = retrofit.create(CatImageApi.class);
+        Call<List<CatImage>> call2 = catRestApi.getCatImageById("sphy");
 
         call2.enqueue(new Callback<List<CatImage>>() {
             @Override
@@ -59,7 +58,7 @@ public class DetailsController {
 
                 List<CatImage> listCatImage = response2.body();
 
-                detailsActivity.showImg(listCatImage.get(0).getUrl());
+                imageActivity.showImg(listCatImage.get(0).getUrl());
             }
 
             @Override
@@ -71,4 +70,3 @@ public class DetailsController {
     }
 
 }
-

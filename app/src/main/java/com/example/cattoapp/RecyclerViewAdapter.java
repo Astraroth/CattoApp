@@ -48,12 +48,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return values.size();
     }
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        // each data item is just a string in this case
         CircleImageView circleImageView;
         public TextView txtName;
         public TextView txtName2;
@@ -71,7 +67,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
@@ -82,12 +77,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        //get element from your dataset at this position
-        //replace the contents of the view with that element
+
         final CatBreed selectedCat = values.get(position);
         final String name = selectedCat.getName();
         holder.txtName.setText(name);
