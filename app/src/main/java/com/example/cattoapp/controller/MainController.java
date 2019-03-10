@@ -52,6 +52,7 @@ public class MainController {
 
                 List<CatBreed> listCatBreed = response.body();
                 mainActivity.showList(listCatBreed);
+
                 mainActivity.hideLoader();
             }
 

@@ -10,16 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.cattoapp.model.CatBreed;
+import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.lang.Object;
-import android.graphics.Bitmap;
-import android.widget.Toast;
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -55,6 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView txtName2;
         public RelativeLayout parent_layout;
         public View layout;
+        public ImageView catimage;
 
 
         public ViewHolder(View v) {
@@ -63,6 +59,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             txtName = (TextView) v.findViewById(R.id.firstLine);
             txtName2 = (TextView) v.findViewById(R.id.secondLine);
             parent_layout = (RelativeLayout) v.findViewById(R.id.parent_layout);
+            catimage = (ImageView) v.findViewById(R.id.catImage);
         }
 
     }
@@ -80,13 +77,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-
         final CatBreed selectedCat = values.get(position);
         final String name = selectedCat.getName();
-        holder.txtName.setText(name);
-
         final String origin = selectedCat.getOrigin();
+
+        holder.txtName.setText(name);
         holder.txtName2.setText(origin);
+
+
 
         Log.d("ON BIND", "called");
         holder.itemView.setOnClickListener(new View.OnClickListener() {

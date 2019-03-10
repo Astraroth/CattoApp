@@ -46,18 +46,15 @@ public class ImageController {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        //On crée notre interface
-        CatRestApi catRestApi = retrofit.create(CatRestApi.class);
 
-        //CatImageApi catImageApi = retrofit.create(CatImageApi.class);
-        Call<List<CatImage>> call2 = catRestApi.getCatImageById("sphy");
+        CatRestApi catRestApi = retrofit.create(CatRestApi.class);
+        Call<List<CatImage>> call2 = catRestApi.getCatImageById();
 
         call2.enqueue(new Callback<List<CatImage>>() {
             @Override
             public void onResponse(Call<List<CatImage>> call2, Response<List<CatImage>> response2) {
 
                 List<CatImage> listCatImage = response2.body();
-
                 imageActivity.showImg(listCatImage.get(0).getUrl());
             }
 
@@ -66,7 +63,5 @@ public class ImageController {
                 Log.d("Erreur", "API ERROR");
             }
         });
-
     }
-
 }

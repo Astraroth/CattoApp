@@ -2,10 +2,9 @@ package com.example.cattoapp;
 
 import com.example.cattoapp.controller.MainController;
 import com.example.cattoapp.model.CatBreed;
-import com.example.cattoapp.model.CatImage;
+import com.squareup.picasso.Picasso;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -45,12 +43,11 @@ public class MainActivity extends Activity {
                 MediaPlayer.create(getApplicationContext(), R.raw.bongo_cat),
         };
         FloatingActionButton playCatSound = (FloatingActionButton) this.findViewById(R.id.buttonSound);
-
         playCatSound.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(), "MEOW ! (Sound on)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Meow ! (Sound on)", Toast.LENGTH_SHORT).show();
                 sounds[rand.nextInt(sounds.length)].start();
             }
         });
@@ -84,11 +81,9 @@ public class MainActivity extends Activity {
     public void showList(List<CatBreed> list){
 
         recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        // define an adapter
         mAdapter = new RecyclerViewAdapter(list,
 
                 new OnItemClickListener() {
@@ -100,9 +95,14 @@ public class MainActivity extends Activity {
                         Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
                         intent.putExtra("detail_description",  item.getDescription());
                         intent.putExtra("detail_temperament",  item.getTemperament());
+                        intent.putExtra("detail_name",  item.getName());
+
                         getApplicationContext().startActivity(intent);
                     }
                 });
+
+
+
         recyclerView.setAdapter(mAdapter);
 
     }
