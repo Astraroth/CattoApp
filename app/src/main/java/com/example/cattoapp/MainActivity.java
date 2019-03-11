@@ -91,37 +91,56 @@ public class MainActivity extends Activity {
 
 
         ImageView animation = (ImageView) findViewById(R.id.spacecat);
+        ImageView animation2 = (ImageView) findViewById(R.id.spacecat2);
         animation.setBackgroundResource(R.drawable.cat_anim);
-        final AnimationDrawable LuciAnimation = (AnimationDrawable) animation.getBackground();
+        animation2.setBackgroundResource(R.drawable.cat_anim);
+
+        final AnimationDrawable Spacecatanimation = (AnimationDrawable) animation.getBackground();
+        final AnimationDrawable Spacecatanimation2 = (AnimationDrawable) animation2.getBackground();
 
         animation.setScaleX(0.5f);
         animation.setScaleY(0.3f);
         animation.setY(600);
+
+        animation2.setScaleX(0.3f);
+        animation2.setScaleY(0.2f);
+        animation2.setX(-300);
+        animation2.setY(800);
+
         TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
+        TranslateAnimation translateAnimation2 = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
+
         translateAnimation.setInterpolator(new AccelerateInterpolator());
         translateAnimation.setDuration(4000);
         translateAnimation.setFillEnabled(true);
         translateAnimation.setFillAfter(true);
-        translateAnimation.setAnimationListener(new Animation.AnimationListener() {
+
+        translateAnimation2.setInterpolator(new AccelerateInterpolator());
+        translateAnimation2.setDuration(2000);
+        translateAnimation2.setFillEnabled(true);
+        translateAnimation2.setFillAfter(true);
+        translateAnimation2.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation)
             {
                 // TODO Auto-generated method stub
-                LuciAnimation.start();
+                Spacecatanimation.start();
+                Spacecatanimation2.start();
             }
             @Override
-            public void onAnimationEnd(Animation arg0)
-            {
+            public void onAnimationEnd(Animation arg0) {
                 Toast.makeText(getApplicationContext(), "Miaow",Toast.LENGTH_SHORT).show();
+                Spacecatanimation.stop();
+                Spacecatanimation2.stop();
             }
             @Override
-            public void onAnimationRepeat(Animation animation)
-            {
-                // TODO Auto-generated method stub
+            public void onAnimationRepeat(Animation animation) {
             }
         });
         animation.startAnimation(translateAnimation);
+        animation2.startAnimation(translateAnimation2);
 
 
         mAdapter = new RecyclerViewAdapter(list,
