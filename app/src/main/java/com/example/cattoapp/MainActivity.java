@@ -6,12 +6,17 @@ import com.squareup.picasso.Picasso;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -83,6 +88,41 @@ public class MainActivity extends Activity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+
+        ImageView animation = (ImageView) findViewById(R.id.spacecat);
+        animation.setBackgroundResource(R.drawable.cat_anim);
+        final AnimationDrawable LuciAnimation = (AnimationDrawable) animation.getBackground();
+
+        animation.setScaleX(0.5f);
+        animation.setScaleY(0.3f);
+        animation.setY(600);
+        TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
+        translateAnimation.setInterpolator(new AccelerateInterpolator());
+        translateAnimation.setDuration(4000);
+        translateAnimation.setFillEnabled(true);
+        translateAnimation.setFillAfter(true);
+        translateAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation)
+            {
+                // TODO Auto-generated method stub
+                LuciAnimation.start();
+            }
+            @Override
+            public void onAnimationEnd(Animation arg0)
+            {
+                Toast.makeText(getApplicationContext(), "Miaow",Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation)
+            {
+                // TODO Auto-generated method stub
+            }
+        });
+        animation.startAnimation(translateAnimation);
+
 
         mAdapter = new RecyclerViewAdapter(list,
 

@@ -40,7 +40,7 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/ZdhQh9wc9.jpg",//britishshort
             "https://www.thehappycatsite.com/wp-content/uploads/2017/09/burmese.jpg",//burmese
             "https://cdn2.thecatapi.com/images/jvg3XfEdC.jpg",//burmilla
-            "http://www.catbreedslist.com/uploads/allimg/cat-pictures/California-Spangled-Cat-2.jpg"//california
+            "http://www.catbreedslist.com/uploads/allimg/cat_anim-pictures/California-Spangled-Cat-2.jpg"//california
     };
 
 
@@ -52,7 +52,7 @@ public class DetailsActivity extends AppCompatActivity {
         getIncomingIntent();
 
         final ImageView image = findViewById(R.id.detailimage);
-        final String name = getIntent().getStringExtra("detail_name"); //name of cat
+        final String name = getIntent().getStringExtra("detail_name"); //name of cat_anim
 
         for(Integer i = 0; i < cats.length; i++){
             if(name.equals(cats[i])){
