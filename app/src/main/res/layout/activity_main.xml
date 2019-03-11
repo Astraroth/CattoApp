@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/catswall">
+    android:background="@drawable/catswall"
+    >
 
 
     <android.support.v7.widget.RecyclerView
@@ -15,6 +16,14 @@
         android:layout_height="match_parent">
 
     </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -54,6 +63,8 @@
         android:id="@+id/spacecat2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
 
 
 

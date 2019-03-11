@@ -40,7 +40,7 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/ZdhQh9wc9.jpg",//britishshort
             "https://www.thehappycatsite.com/wp-content/uploads/2017/09/burmese.jpg",//burmese
             "https://cdn2.thecatapi.com/images/jvg3XfEdC.jpg",//burmilla
-            "http://www.catbreedslist.com/uploads/allimg/cat_anim-pictures/California-Spangled-Cat-2.jpg"//california
+            "https://cdn.shopify.com/s/files/1/0997/4496/files/Capture_099e7ffd-2e2a-4ad9-8a87-cb1de94d94fa_grande.PNG?v=1538422473.jpg"//california
     };
 
 
@@ -88,11 +88,8 @@ public class DetailsActivity extends AppCompatActivity {
    public void showImg(String url){
 
         ImageView image = findViewById(R.id.detailimage);
-
         Picasso.with(getApplicationContext())
-            .load(url)
-                .placeholder(R.drawable.nyancaticon)
-                .into(image);
+            .load(url).placeholder(R.drawable.nyancaticon).into(image);
 }
 
 }
