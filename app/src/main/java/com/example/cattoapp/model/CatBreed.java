@@ -8,6 +8,8 @@ public class CatBreed {
     private String origin;
     private String description;
     private String temperament;
+    private Integer energy_level;
+    private Integer intelligence;
 
     public String getName() {
         return name;
@@ -27,6 +29,14 @@ public class CatBreed {
 
     public String getTemperament() {
         return temperament;
+    }
+
+    public Integer getEnergy_level() {
+        return energy_level;
+    }
+
+    public Integer getIntelligence() {
+        return intelligence;
     }
 
 }

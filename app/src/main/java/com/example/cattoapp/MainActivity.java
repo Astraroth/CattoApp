@@ -123,6 +123,9 @@ public class MainActivity extends Activity {
                         intent.putExtra("detail_temperament",  item.getTemperament());
                         intent.putExtra("detail_name",  item.getName());
 
+                        intent.putExtra("detail_energy_level",  item.getEnergy_level());
+                        intent.putExtra("detail_intelligence",  item.getIntelligence());
+
                         getApplicationContext().startActivity(intent);
                     }
                 });
@@ -163,22 +166,15 @@ public class MainActivity extends Activity {
     public void Animate() {
         ImageView animation = (ImageView) findViewById(R.id.spacecat);
         ImageView animation2 = (ImageView) findViewById(R.id.spacecat2);
-        //ImageView animation3 = (ImageView) findViewById(R.id.spacecat2);
-
-        /*ImageView animations[] = {
-                (ImageView) findViewById(R.id.spacecat),
-                (ImageView) findViewById(R.id.spacecat2),
-                (ImageView) findViewById(R.id.spacecat3)
-        };*/
 
         animation.setBackgroundResource(R.drawable.spacecat_anim);
         animation2.setBackgroundResource(R.drawable.spacecat_anim);
-        //animation3.setBackgroundResource(R.drawable.spacecat_anim);
+
 
 
         final AnimationDrawable Spacecatanimation = (AnimationDrawable) animation.getBackground();
         final AnimationDrawable Spacecatanimation2 = (AnimationDrawable) animation2.getBackground();
-        //final AnimationDrawable Spacecatanimation3 = (AnimationDrawable) animation2.getBackground();
+
 
         animation.setScaleX(0.5f);
         animation.setScaleY(0.4f);
@@ -190,18 +186,11 @@ public class MainActivity extends Activity {
         animation2.setX(-200);
         animation2.setY(800);
 
-        /*animation3.setScaleX(0.5f);
-        animation3.setScaleY(0.3f);
-        animation3.setX(300);
-        animation3.setY(800);*/
-
 
         TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
         TranslateAnimation translateAnimation2 = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
-        //TranslateAnimation translateAnimation3 = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
-                //Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
 
 
         translateAnimation.setInterpolator(new AccelerateInterpolator());
@@ -214,10 +203,7 @@ public class MainActivity extends Activity {
         translateAnimation2.setFillEnabled(true);
         translateAnimation2.setFillAfter(true);
 
-        /*translateAnimation3.setInterpolator(new AccelerateInterpolator());
-        translateAnimation3.setDuration(5000);
-        translateAnimation3.setFillEnabled(true);
-        translateAnimation3.setFillAfter(true);*/
+
 
         translateAnimation2.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -226,7 +212,7 @@ public class MainActivity extends Activity {
                 Sound_Animate();
                 Spacecatanimation.start();
                 Spacecatanimation2.start();
-                //Spacecatanimation3.start();
+
 
             }
 
@@ -234,8 +220,7 @@ public class MainActivity extends Activity {
             public void onAnimationEnd(Animation arg0) {
                 Toast.makeText(getApplicationContext(), "SpaceCat !", Toast.LENGTH_SHORT).show();
 
-                //ImageView background = findViewById(R.id.background);
-                //background.setImageResource(android.R.color.transparent);
+
             }
 
             @Override
@@ -245,7 +230,6 @@ public class MainActivity extends Activity {
 
         animation.startAnimation(translateAnimation);
         animation2.startAnimation(translateAnimation2);
-        //animation3.startAnimation(translateAnimation3);
 
     }
 

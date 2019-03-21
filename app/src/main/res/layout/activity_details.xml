@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,72 +8,303 @@
     android:layout_height="match_parent"
     android:background="@color/detailBackground">
 
-
-    <ImageView
-        android:id="@+id/detailimage"
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="384dp"
-        android:layout_marginBottom="381dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/nyancaticon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/detailimage"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/detailBackground">
 
 
+            <TextView
+                android:id="@+id/intelligence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/energy"
 
-        android:text="Description"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailimage" />
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Intelligence :"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/energy"
+                app:layout_constraintVertical_bias="0.145" />
 
-    <TextView
-        android:id="@+id/temperament"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/detailimage"
+                android:layout_width="match_parent"
+                android:layout_height="384dp"
+                android:layout_marginBottom="381dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nyancaticon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.133" />
 
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/detailimage"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
 
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
 
-        android:shadowColor="#130101"
-        android:shadowDx="0.5"
-        android:shadowDy="0.5"
-        android:shadowRadius="3"
+                android:layout_marginRight="25dp"
+                android:text="Description"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temperament" />
 
-        android:text="Temperament"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintVertical_bias="0.621" />
+            <TextView
+                android:id="@+id/temperament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+
+                android:layout_marginBottom="8dp"
+                android:shadowColor="#130101"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+
+                android:shadowRadius="3"
+                android:text="Temperament"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailimage"
+                app:layout_constraintVertical_bias="0.014" />
 
 
+            <TextView
+                android:id="@+id/energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/temperament"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="44dp"
+                android:text="Energy :"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.353"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="36dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toEndOf="@+id/star1"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintVertical_bias="0.216" />
+
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="37dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.029"
+                app:layout_constraintStart_toEndOf="@+id/star2"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintVertical_bias="0.215" />
+
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="34dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.029"
+                app:layout_constraintStart_toEndOf="@+id/star3"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintVertical_bias="0.215" />
+
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="34dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.029"
+                app:layout_constraintStart_toEndOf="@+id/star4"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintVertical_bias="0.215" />
+
+            <ImageView
+                android:id="@+id/star6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.361"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star1"
+                app:layout_constraintVertical_bias="0.882" />
+
+            <ImageView
+                android:id="@+id/star7"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/star6"
+                app:layout_constraintTop_toBottomOf="@+id/star2"
+                app:layout_constraintVertical_bias="0.884" />
+
+            <ImageView
+                android:id="@+id/star8"
+                android:layout_width="37dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/star7"
+                app:layout_constraintTop_toBottomOf="@+id/star3"
+                app:layout_constraintVertical_bias="0.918" />
+
+
+            <ImageView
+                android:id="@+id/star9"
+                android:layout_width="34dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toEndOf="@+id/star8"
+                app:layout_constraintTop_toBottomOf="@+id/star4"
+                app:layout_constraintVertical_bias="0.916" />
+
+
+            <ImageView
+                android:id="@+id/star10"
+                android:layout_width="34dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.033"
+                app:layout_constraintStart_toEndOf="@+id/star9"
+                app:layout_constraintTop_toBottomOf="@+id/star5"
+                app:layout_constraintVertical_bias="0.914" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
-

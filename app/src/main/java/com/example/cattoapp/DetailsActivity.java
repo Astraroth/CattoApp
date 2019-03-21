@@ -92,30 +92,118 @@ public class DetailsActivity extends AppCompatActivity {
         getIncomingIntent();
 
         final ImageView image = findViewById(R.id.detailimage);
-        final String name = getIntent().getStringExtra("detail_name"); //name of spacecat_anim
+        final String name = getIntent().getStringExtra("detail_name"); //name of selected cat
+
+        final Integer energylevel = getIntent().getIntExtra("detail_energy_level", 0); //energy level of selected cat
+        final Integer intelligence = getIntent().getIntExtra("detail_intelligence", 0); //intelligence  of selected cat
+
+        //final Integer[] caracteres = {getIntent().getIntExtra("detail_energy_level", 0), getIntent().getIntExtra("detail_intelligence", 0)};
+
+        ImageView star1 = findViewById(R.id.star1); //energy
+        ImageView star2 = findViewById(R.id.star2);
+        ImageView star3 = findViewById(R.id.star3);
+        ImageView star4 = findViewById(R.id.star4);
+        ImageView star5 = findViewById(R.id.star5);
+
+        ImageView star6 = findViewById(R.id.star6); //intelligence
+        ImageView star7 = findViewById(R.id.star7);
+        ImageView star8 = findViewById(R.id.star8);
+        ImageView star9 = findViewById(R.id.star9);
+        ImageView star10 = findViewById(R.id.star10);
 
         for(Integer i = 0; i < cats.length; i++){
             if(name.equals(cats[i])){
                 showImg(images[i]);
             }
         }
-    }
+
+        switch (energylevel) {
+
+            case 1:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
+                break;
+
+            case 2:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
+                break;
+
+            case 3:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star3);
+                break;
+
+            case 4:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star3);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star4);
+                break;
+
+            case 5:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star3);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star4);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star5);
+                break;
+
+            }
+
+        switch (intelligence) {
+
+            case 1:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
+                break;
+
+            case 2:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
+                break;
+
+            case 3:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star8);
+                break;
+
+            case 4:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star8);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star9);
+                break;
+
+            case 5:
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star8);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star9);
+                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star10);
+                break;
+
+        }
+
+}
 
     private void getIncomingIntent(){
 
         Log.d("DETAILS ACTIVITY", "checking for incoming intents");
 
         if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")
-                                                            && getIntent().hasExtra("detail_name")){
+                                                            &&getIntent().hasExtra("detail_energy_level")){
 
             String detaildescription = getIntent().getStringExtra("detail_description");
             String detailtemperament = getIntent().getStringExtra("detail_temperament");
-            setText(detaildescription, detailtemperament);
+            Integer detailenergylevel = getIntent().getIntExtra("detail_energy_level", 0);
+
+            setText(detaildescription, detailtemperament/*,detailenergylevel */);
         }
 
     }
 
-    private void setText(String detail_description, String detail_temperament){
+    private void setText(String detail_description, String detail_temperament/*, Integer detail_energy_level*/){
 
         TextView description = findViewById(R.id.description);
         description.setText(detail_description);
@@ -123,6 +211,8 @@ public class DetailsActivity extends AppCompatActivity {
         TextView temperament = findViewById(R.id.temperament);
         temperament.setText(detail_temperament);
 
+        /*TextView energylevel = findViewById(R.id.value);
+        energylevel.setText(detail_energy_level.toString());*/
     }
 
    public void showImg(String url){
