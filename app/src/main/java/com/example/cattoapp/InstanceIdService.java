@@ -10,9 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by What's That Lambda on 11/6/17.
- */
 
 public class InstanceIdService extends FirebaseInstanceIdService {
     public InstanceIdService() {

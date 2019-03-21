@@ -27,7 +27,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.IBinder;
 
 
 public class MainActivity extends Activity {
@@ -86,8 +85,7 @@ public class MainActivity extends Activity {
 
             if (shake > 10) {
                 ImageView background = findViewById(R.id.background);
-                Picasso.with(getApplicationContext()).load(R.drawable.spacecatwp).into(background);
-
+                //Picasso.with(getApplicationContext()).load(R.drawable.spacecatwpmin).into(background);
                 Animate();
             }
         }
@@ -129,7 +127,6 @@ public class MainActivity extends Activity {
                     }
                 });
 
-
         recyclerView.setAdapter(mAdapter);
 
     }
@@ -165,39 +162,63 @@ public class MainActivity extends Activity {
     ///////ANIMATION
     public void Animate() {
         ImageView animation = (ImageView) findViewById(R.id.spacecat);
-
-
-
         ImageView animation2 = (ImageView) findViewById(R.id.spacecat2);
-        animation.setBackgroundResource(R.drawable.cat_anim);
-        animation2.setBackgroundResource(R.drawable.cat_anim);
+        //ImageView animation3 = (ImageView) findViewById(R.id.spacecat2);
+
+        /*ImageView animations[] = {
+                (ImageView) findViewById(R.id.spacecat),
+                (ImageView) findViewById(R.id.spacecat2),
+                (ImageView) findViewById(R.id.spacecat3)
+        };*/
+
+        animation.setBackgroundResource(R.drawable.spacecat_anim);
+        animation2.setBackgroundResource(R.drawable.spacecat_anim);
+        //animation3.setBackgroundResource(R.drawable.spacecat_anim);
+
 
         final AnimationDrawable Spacecatanimation = (AnimationDrawable) animation.getBackground();
         final AnimationDrawable Spacecatanimation2 = (AnimationDrawable) animation2.getBackground();
+        //final AnimationDrawable Spacecatanimation3 = (AnimationDrawable) animation2.getBackground();
 
         animation.setScaleX(0.5f);
-        animation.setScaleY(0.3f);
+        animation.setScaleY(0.4f);
+        animation.setX(200);
         animation.setY(600);
 
         animation2.setScaleX(0.3f);
         animation2.setScaleY(0.2f);
-        animation2.setX(-300);
+        animation2.setX(-200);
         animation2.setY(800);
+
+        /*animation3.setScaleX(0.5f);
+        animation3.setScaleY(0.3f);
+        animation3.setX(300);
+        animation3.setY(800);*/
+
 
         TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
         TranslateAnimation translateAnimation2 = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
+        //TranslateAnimation translateAnimation3 = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                //Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
+
 
         translateAnimation.setInterpolator(new AccelerateInterpolator());
-        translateAnimation.setDuration(4000);
+        translateAnimation.setDuration(5000);
         translateAnimation.setFillEnabled(true);
         translateAnimation.setFillAfter(true);
 
         translateAnimation2.setInterpolator(new AccelerateInterpolator());
-        translateAnimation2.setDuration(4000);
+        translateAnimation2.setDuration(5000);
         translateAnimation2.setFillEnabled(true);
         translateAnimation2.setFillAfter(true);
+
+        /*translateAnimation3.setInterpolator(new AccelerateInterpolator());
+        translateAnimation3.setDuration(5000);
+        translateAnimation3.setFillEnabled(true);
+        translateAnimation3.setFillAfter(true);*/
+
         translateAnimation2.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -205,25 +226,26 @@ public class MainActivity extends Activity {
                 Sound_Animate();
                 Spacecatanimation.start();
                 Spacecatanimation2.start();
+                //Spacecatanimation3.start();
+
             }
 
             @Override
             public void onAnimationEnd(Animation arg0) {
-                Toast.makeText(getApplicationContext(), "Miaow", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "SpaceCat !", Toast.LENGTH_SHORT).show();
 
-                ImageView background = findViewById(R.id.background);
-                background.setImageResource(android.R.color.transparent);
-
-
+                //ImageView background = findViewById(R.id.background);
+                //background.setImageResource(android.R.color.transparent);
             }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
             }
         });
+
         animation.startAnimation(translateAnimation);
         animation2.startAnimation(translateAnimation2);
-
+        //animation3.startAnimation(translateAnimation3);
 
     }
 

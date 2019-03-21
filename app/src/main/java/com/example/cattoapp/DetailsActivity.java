@@ -7,20 +7,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.cattoapp.R;
 import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity {
 
     private String[] cats = {"Abyssinian", "Aegean", "American Bobtail", "American Curl", "American Shorthair", "American Wirehair","Arabian Mau",
                             "Australian Mist", "Balinese", "Bambino", "Bengal", "Birman", "Bombay", "British Longhair", "British Shorthair",
-                            "Burmese", "Burmilla", "California Spangled", /*"Chantilly-Tiffany", "Chartreux", "Chausie", "Cheetoh", "Colorpoint Shorthair",
-                            "Cornish Rex", "Cymric", "Cyprus", "Devon Rex", "Donskoy", "Dragon li", "Egyptian Mau", "European Burmese", "Excotic Shorthair",
-                            "Havana Brown", "Himalayan", "Japanese Bobtail", "Javanese", "Khao Manee","Korat", "Kurilian", "LaPerm", "Maine Coon", "Manx",
-                            "Munchkin", "Nebelung", "Norwegian Forest Cat", "Ocicat", "Oriental", "Persian", "Pixie-bob", "Ragamuffin", "Ragdoll",
-                            "Russian Blue", "Savannah", "Scottish Fold", "Selkirk Rex", "Siamese", "Siberian", "Singapura", "Snowshoe", "Somali",
+                            "Burmese", "Burmilla", "California Spangled", "Chantilly-Tiffany", "Chartreux", "Chausie", "Cheetoh", "Colorpoint Shorthair",
+                            "Cornish Rex" ,"Cymric", "Cyprus", "Devon Rex", "Donskoy", "Dragon Li", "Egyptian Mau", "European Burmese", "Exotic Shorthair",
+                            "Havana Brown", "Himalayan", "Japanese Bobtail", "Javanese","Khao Manee","Korat", "Kurilian", "LaPerm", "Maine Coon",
+                            "Malayan", "Manx","Munchkin", "Nebelung", "Norwegian Forest Cat", "Ocicat", "Oriental", "Persian", "Pixie-bob", "Ragamuffin", "Ragdoll",
+                            "Russian Blue", "Savannah", "Scottish Fold", "Selkirk Rex", "Siamese", "Siberian", "Singapura", "Snowshoe"/*, "Somali",
                             "Sphynx", "Tonkinese", "Toyger", "Turkish Angora", "Turkish Van", "York Chocolate"*/};
 
     private String [] images = {"https://cdn2.thecatapi.com/images/9x1zk_Qdr.jpg", //abys
@@ -40,7 +38,49 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/ZdhQh9wc9.jpg",//britishshort
             "https://www.thehappycatsite.com/wp-content/uploads/2017/09/burmese.jpg",//burmese
             "https://cdn2.thecatapi.com/images/jvg3XfEdC.jpg",//burmilla
-            "https://cdn.shopify.com/s/files/1/0997/4496/files/Capture_099e7ffd-2e2a-4ad9-8a87-cb1de94d94fa_grande.PNG?v=1538422473.jpg"//california
+            "https://cdn.shopify.com/s/files/1/0997/4496/files/Capture_099e7ffd-2e2a-4ad9-8a87-cb1de94d94fa_grande.PNG?v=1538422473.jpg",//california
+            "https://catspro.com/wp-content/uploads/2018/01/Shorty-black-hair-cat-1024x640.jpg",//chantilly
+            "https://cdn2.thecatapi.com/images/8cXEkQQwc.jpg",//chartreux
+            "https://cdn2.thecatapi.com/images/VT9NOyJqk.jpg",//chausie
+            "https://www.petguide.com/wp-content/uploads/2018/02/cheetoh.jpg",//cheetoh
+            "https://cdn1-www.cattime.com/assets/uploads/gallery/colorpoint-shorthair-cats-and-kittens/colorpoint-shorthair-cats-kittens-1.jpg",//colorpoint
+            "https://cdn2.thecatapi.com/images/DmP9GCClC.jpg", //cornish
+            "https://vetstreet-brightspot.s3.amazonaws.com/47/02/4e7e071c45959ad31884a8358cf5/Cymric-AP-C3AGGL-645sm3614.jpg",//cymric
+            "https://upload.wikimedia.org/wikipedia/commons/b/b9/CyprusShorthair.jpg",//cyprus
+            "https://cdn2.thecatapi.com/images/uUGt0UBzF.jpg",//devonrex
+            "https://cdn2.thecatapi.com/images/KWVenr3Pq.jpg",//donksoy
+            "https://www.mascotarios.org/wp-content/uploads/2011/07/dragon.jpg",//dragonli
+            "http://www.pethealthnetwork.com/sites/default/files/content/images/eqyptian-mau185646620.png",//egyptmau
+            "https://cdn2.thecatapi.com/images/YOjBThApG.jpg",//europburmese
+            "https://cdn2.thecatapi.com/images/FCNqMC83P.jpg",//exotic
+            "https://cdn2.thecatapi.com/images/gQggWSR5I.jpg",//havana
+            "https://cdn2.thecatapi.com/images/kg7nc0poR.jpg",//himalayan
+            "https://cdn2.thecatapi.com/images/-tm9-znzl.jpg",//japbobtail
+            "https://cdn2.thecatapi.com/images/V00qLe4Gw.jpg",//javanese
+            "https://cdn2.thecatapi.com/images/165ok6ESN.jpg",//khao
+            "https://cdn2.thecatapi.com/images/1TcC-kiI1.jpg",//korat
+            "https://cdn.shopify.com/s/files/1/0997/4496/files/Kurilian_Bobtail_Cat_grande.png?v=1535134457.jpg",//kurilian
+            "http://catsplace.org/wp-content/uploads/2015/01/LaPerm-cat-breed.jpg",//laperm
+            "https://cdn2.thecatapi.com/images/PKblw2RPe.jpg",//mainecoon
+            "http://legionfront.me/wp-content/uploads/2018/06/malayan-cat-malay-man-catcher-how-it-works.jpg",//malayan
+            "https://cdn2.thecatapi.com/images/AoDtRhYcL.jpg",//manx
+            "https://cdn2.thecatapi.com/images/8LxU2Gwmo.jpg",//munchkin
+            "https://cdn2.thecatapi.com/images/OUfeISEoi.jpg",//nebelung
+            "https://cdn2.thecatapi.com/images/JnD5BF9Uq.jpg",//norwegian
+            "https://cdn2.thecatapi.com/images/HksHrR8-9.jpg",//ocicat
+            "https://cdn2.thecatapi.com/images/Mt-cUeiUY.jpg",//oriental
+            "https://cdn2.thecatapi.com/images/28JWnlpYH.jpg",//persian
+            "https://cdn2.thecatapi.com/images/4MEAQffKS.jpg",//pixiebob
+            "https://cdn2.thecatapi.com/images/SMuZx-bFM.jpg",//ragamuffin
+            "https://cdn2.thecatapi.com/images/-JE1XgBFt.jpg",//ragdoll
+            "https://cdn2.thecatapi.com/images/tHKLZkKZG.jpg",//russian
+            "https://cdn2.thecatapi.com/images/Od-McTDZU.jpg",//savannah
+            "https://cdn2.thecatapi.com/images/6P42aYVha.jpg",//scottish
+            "https://cdn2.thecatapi.com/images/kcDyctLTZ.jpg",//selkirk
+            "https://cdn2.thecatapi.com/images/stVqmJmi7.jpg",//siamese
+            "https://cdn2.thecatapi.com/images/6KCUyqE4v.jpg",//siberian
+            "https://cdn2.thecatapi.com/images/JBkP_EJm9.jpg",//singapura
+            "https://cdn2.thecatapi.com/images/9cbCzlbJt.jpg"//snowshoe
     };
 
 
@@ -52,7 +92,7 @@ public class DetailsActivity extends AppCompatActivity {
         getIncomingIntent();
 
         final ImageView image = findViewById(R.id.detailimage);
-        final String name = getIntent().getStringExtra("detail_name"); //name of cat_anim
+        final String name = getIntent().getStringExtra("detail_name"); //name of spacecat_anim
 
         for(Integer i = 0; i < cats.length; i++){
             if(name.equals(cats[i])){
