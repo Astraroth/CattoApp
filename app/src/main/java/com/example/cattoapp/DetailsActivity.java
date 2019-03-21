@@ -99,17 +99,17 @@ public class DetailsActivity extends AppCompatActivity {
 
         //final Integer[] caracteres = {getIntent().getIntExtra("detail_energy_level", 0), getIntent().getIntExtra("detail_intelligence", 0)};
 
-        ImageView star1 = findViewById(R.id.star1); //energy
-        ImageView star2 = findViewById(R.id.star2);
-        ImageView star3 = findViewById(R.id.star3);
-        ImageView star4 = findViewById(R.id.star4);
-        ImageView star5 = findViewById(R.id.star5);
+        ImageView paw1 = findViewById(R.id.paw1); //energy
+        ImageView paw2 = findViewById(R.id.paw2);
+        ImageView paw3 = findViewById(R.id.paw3);
+        ImageView paw4 = findViewById(R.id.paw4);
+        ImageView paw5 = findViewById(R.id.paw5);
 
-        ImageView star6 = findViewById(R.id.star6); //intelligence
-        ImageView star7 = findViewById(R.id.star7);
-        ImageView star8 = findViewById(R.id.star8);
-        ImageView star9 = findViewById(R.id.star9);
-        ImageView star10 = findViewById(R.id.star10);
+        ImageView paw6 = findViewById(R.id.paw6); //intelligence
+        ImageView paw7 = findViewById(R.id.paw7);
+        ImageView paw8 = findViewById(R.id.paw8);
+        ImageView paw9 = findViewById(R.id.paw9);
+        ImageView paw10 = findViewById(R.id.paw10);
 
         for(Integer i = 0; i < cats.length; i++){
             if(name.equals(cats[i])){
@@ -120,33 +120,33 @@ public class DetailsActivity extends AppCompatActivity {
         switch (energylevel) {
 
             case 1:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw1);
                 break;
 
             case 2:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw1);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw2);
                 break;
 
             case 3:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star3);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw1);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw2);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw3);
                 break;
 
             case 4:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star3);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star4);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw1);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw2);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw3);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw4);
                 break;
 
             case 5:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star1);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star2);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star3);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star4);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star5);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw1);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw2);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw3);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw4);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw5);
                 break;
 
             }
@@ -154,33 +154,33 @@ public class DetailsActivity extends AppCompatActivity {
         switch (intelligence) {
 
             case 1:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
                 break;
 
             case 2:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw7);
                 break;
 
             case 3:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star8);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw7);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw8);
                 break;
 
             case 4:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star8);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star9);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw7);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw8);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw9);
                 break;
 
             case 5:
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star6);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star7);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star8);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star9);
-                Picasso.with(getApplicationContext()).load(R.drawable.stargold).into(star10);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw7);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw8);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw9);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw10);
                 break;
 
         }
