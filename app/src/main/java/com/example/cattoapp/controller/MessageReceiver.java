@@ -11,9 +11,6 @@ import com.example.cattoapp.view.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-/**
- * Created by What's That Lambda on 11/6/17.
- */
 
 public class MessageReceiver extends FirebaseMessagingService {
     private static final int REQUEST_CODE = 1;

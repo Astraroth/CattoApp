@@ -18,8 +18,8 @@ public class DetailsActivity extends AppCompatActivity {
                             "Cornish Rex" ,"Cymric", "Cyprus", "Devon Rex", "Donskoy", "Dragon Li", "Egyptian Mau", "European Burmese", "Exotic Shorthair",
                             "Havana Brown", "Himalayan", "Japanese Bobtail", "Javanese","Khao Manee","Korat", "Kurilian", "LaPerm", "Maine Coon",
                             "Malayan", "Manx","Munchkin", "Nebelung", "Norwegian Forest Cat", "Ocicat", "Oriental", "Persian", "Pixie-bob", "Ragamuffin", "Ragdoll",
-                            "Russian Blue", "Savannah", "Scottish Fold", "Selkirk Rex", "Siamese", "Siberian", "Singapura", "Snowshoe"/*, "Somali",
-                            "Sphynx", "Tonkinese", "Toyger", "Turkish Angora", "Turkish Van", "York Chocolate"*/};
+                            "Russian Blue", "Savannah", "Scottish Fold", "Selkirk Rex", "Siamese", "Siberian", "Singapura", "Snowshoe", "Somali",
+                            "Sphynx", "Tonkinese", "Toyger", "Turkish Angora", "Turkish Van", "York Chocolate"};
 
     private String [] images = {"https://cdn2.thecatapi.com/images/9x1zk_Qdr.jpg", //abys
             "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg", //aegean
@@ -80,7 +80,16 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/stVqmJmi7.jpg",//siamese
             "https://cdn2.thecatapi.com/images/6KCUyqE4v.jpg",//siberian
             "https://cdn2.thecatapi.com/images/JBkP_EJm9.jpg",//singapura
-            "https://cdn2.thecatapi.com/images/9cbCzlbJt.jpg"//snowshoe
+            "https://cdn2.thecatapi.com/images/9cbCzlbJt.jpg",//snowshoe
+            "https://cdn2.thecatapi.com/images/klJJYDl2B.jpg",//somali
+            "https://cdn2.thecatapi.com/images/0c9_EEtqQ.jpg",//sphynx
+            "https://cdn2.thecatapi.com/images/6vPgXY9tb.jpg",//tonkinese
+            "https://cdn2.thecatapi.com/images/Zi4jfH3c6.jpg",//toyger
+            "https://cdn2.thecatapi.com/images/oR3LMBqEZ.jpg",//turkishangora
+            "http://pontus.mentalfloss.com/sites/default/files/turkishvanmama.jpg",//turkishvan
+            "https://cdn2.thecatapi.com/images/LzVDEMYIv.jpg"//yorkchocolate
+
+
     };
 
 
@@ -234,17 +243,22 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void getIncomingIntent(){
 
-        if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")){
+        if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")
+                && getIntent().hasExtra("detail_affection_level")
+                && getIntent().hasExtra("detail_energy_level")){
 
             String detaildescription = getIntent().getStringExtra("detail_description");
             String detailtemperament = getIntent().getStringExtra("detail_temperament");
 
-            SetText(detaildescription, detailtemperament);
+            Integer affection = getIntent().getIntExtra("detail_affection_level",0);
+            Integer energy = getIntent().getIntExtra("detail_energy_level",0);
+
+            SetText(detaildescription, detailtemperament, affection, energy);
         }
 
     }
 
-    private void SetText(String detail_description, String detail_temperament){
+    private void SetText(String detail_description, String detail_temperament, Integer aff, Integer ene){
 
         TextView description = findViewById(R.id.description);
         description.setText(detail_description);
@@ -252,7 +266,15 @@ public class DetailsActivity extends AppCompatActivity {
         TextView temperament = findViewById(R.id.temperament);
         temperament.setText(detail_temperament);
 
+        TextView a = findViewById(R.id.affectionvalue);
+        a.setText(Integer.toString(aff));
+
+        TextView e = findViewById(R.id.energyvalue);
+        e.setText(Integer.toString(ene));
+
     }
+
+    //private void SetValues()
 
    public void showImg(String url){
 
