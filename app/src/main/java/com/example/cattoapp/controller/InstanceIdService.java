@@ -1,4 +1,4 @@
-package com.example.cattoapp;
+package com.example.cattoapp.controller;
 
 
 import com.google.firebase.iid.FirebaseInstanceId;

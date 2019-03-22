@@ -1,17 +1,16 @@
-package com.example.cattoapp;
+package com.example.cattoapp.view;
 
-import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.cattoapp.model.OnItemClickListener;
+import com.example.cattoapp.R;
 import com.example.cattoapp.model.CatBreed;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -23,7 +22,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private List<CatBreed> values;
     private final OnItemClickListener listener;
-    private Context context;
+
 
     public RecyclerViewAdapter(List<CatBreed> myDataset, OnItemClickListener listener) { //constructor
         values = myDataset;
@@ -85,8 +84,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.txtName2.setText(origin);
 
 
-
-        Log.d("ON BIND", "called");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

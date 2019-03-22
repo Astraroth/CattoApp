@@ -1,10 +1,12 @@
-package com.example.cattoapp;
+package com.example.cattoapp.view;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.ImageView;
+
+import com.example.cattoapp.R;
 import com.example.cattoapp.controller.ImageController;
 import com.squareup.picasso.Picasso;
 

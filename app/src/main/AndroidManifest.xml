@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".DetailsActivity"></activity>
-        <activity android:name=".ImageActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.DetailsActivity"></activity>
+        <activity android:name=".view.ImageActivity"></activity>
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,13 +24,13 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MessageReceiver">
+        <service android:name=".controller.MessageReceiver">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <service android:name=".InstanceIdService">
+        <service android:name=".controller.InstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
                 </intent-filter>

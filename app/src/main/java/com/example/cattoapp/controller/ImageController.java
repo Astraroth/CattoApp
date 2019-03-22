@@ -3,7 +3,7 @@ package com.example.cattoapp.controller;
 
 import android.util.Log;
 
-import com.example.cattoapp.ImageActivity;
+import com.example.cattoapp.view.ImageActivity;
 import com.example.cattoapp.model.CatImage;
 import com.example.cattoapp.model.CatRestApi;
 import com.google.gson.Gson;

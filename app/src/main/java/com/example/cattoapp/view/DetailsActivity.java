@@ -1,6 +1,5 @@
-package com.example.cattoapp;
+package com.example.cattoapp.view;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +7,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cattoapp.R;
 import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -89,27 +89,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
         getIncomingIntent();
 
         final ImageView image = findViewById(R.id.detailimage);
         final String name = getIntent().getStringExtra("detail_name"); //name of selected cat
-
-        final Integer energylevel = getIntent().getIntExtra("detail_energy_level", 0); //energy level of selected cat
-        final Integer intelligence = getIntent().getIntExtra("detail_intelligence", 0); //intelligence  of selected cat
-
-        //final Integer[] caracteres = {getIntent().getIntExtra("detail_energy_level", 0), getIntent().getIntExtra("detail_intelligence", 0)};
-
-        ImageView paw1 = findViewById(R.id.paw1); //energy
-        ImageView paw2 = findViewById(R.id.paw2);
-        ImageView paw3 = findViewById(R.id.paw3);
-        ImageView paw4 = findViewById(R.id.paw4);
-        ImageView paw5 = findViewById(R.id.paw5);
-
-        ImageView paw6 = findViewById(R.id.paw6); //intelligence
-        ImageView paw7 = findViewById(R.id.paw7);
-        ImageView paw8 = findViewById(R.id.paw8);
-        ImageView paw9 = findViewById(R.id.paw9);
-        ImageView paw10 = findViewById(R.id.paw10);
 
         for(Integer i = 0; i < cats.length; i++){
             if(name.equals(cats[i])){
@@ -117,7 +101,33 @@ public class DetailsActivity extends AppCompatActivity {
             }
         }
 
-        switch (energylevel) {
+
+        final Integer affectionlevel = getIntent().getIntExtra("detail_affection_level", 0); //affection  of selected cat
+        final Integer energylevel = getIntent().getIntExtra("detail_energy_level", 0); //energy level of selected cat
+        final Integer intelligence = getIntent().getIntExtra("detail_intelligence", 0); //intelligence  of selected cat
+
+
+        ImageView paw1 = findViewById(R.id.paw1); //affection
+        ImageView paw2 = findViewById(R.id.paw2);
+        ImageView paw3 = findViewById(R.id.paw3);
+        ImageView paw4 = findViewById(R.id.paw4);
+        ImageView paw5 = findViewById(R.id.paw5);
+
+        ImageView paw6 = findViewById(R.id.paw6); //energy
+        ImageView paw7 = findViewById(R.id.paw7);
+        ImageView paw8 = findViewById(R.id.paw8);
+        ImageView paw9 = findViewById(R.id.paw9);
+        ImageView paw10 = findViewById(R.id.paw10);
+
+        /*ImageView paw11 = findViewById(R.id.paw11); //intelligence
+        ImageView paw12 = findViewById(R.id.paw12);
+        ImageView paw13 = findViewById(R.id.paw13);
+        ImageView paw14 = findViewById(R.id.paw14);
+        ImageView paw15 = findViewById(R.id.paw15);*/
+
+
+
+        switch (affectionlevel) {
 
             case 1:
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw1);
@@ -151,7 +161,7 @@ public class DetailsActivity extends AppCompatActivity {
 
             }
 
-        switch (intelligence) {
+        switch (energylevel) {
 
             case 1:
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
@@ -185,25 +195,56 @@ public class DetailsActivity extends AppCompatActivity {
 
         }
 
+
+        /*switch (intelligence) {
+
+            case 1:
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw11);
+                break;
+
+            case 2:
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw11);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw12);
+                break;
+
+            case 3:
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw7);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw8);
+                break;
+
+            case 4:
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw11);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw12);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw13);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw14);
+                break;
+
+            case 5:
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw11);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw12);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw13);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw14);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw15);
+                break;
+
+        }*/
+
 }
 
     private void getIncomingIntent(){
 
-        Log.d("DETAILS ACTIVITY", "checking for incoming intents");
-
-        if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")
-                                                            &&getIntent().hasExtra("detail_energy_level")){
+        if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")){
 
             String detaildescription = getIntent().getStringExtra("detail_description");
             String detailtemperament = getIntent().getStringExtra("detail_temperament");
-            Integer detailenergylevel = getIntent().getIntExtra("detail_energy_level", 0);
 
-            setText(detaildescription, detailtemperament/*,detailenergylevel */);
+            SetText(detaildescription, detailtemperament);
         }
 
     }
 
-    private void setText(String detail_description, String detail_temperament/*, Integer detail_energy_level*/){
+    private void SetText(String detail_description, String detail_temperament){
 
         TextView description = findViewById(R.id.description);
         description.setText(detail_description);
@@ -211,8 +252,6 @@ public class DetailsActivity extends AppCompatActivity {
         TextView temperament = findViewById(R.id.temperament);
         temperament.setText(detail_temperament);
 
-        /*TextView energylevel = findViewById(R.id.value);
-        energylevel.setText(detail_energy_level.toString());*/
     }
 
    public void showImg(String url){

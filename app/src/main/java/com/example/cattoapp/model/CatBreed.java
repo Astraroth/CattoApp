@@ -10,6 +10,7 @@ public class CatBreed {
     private String temperament;
     private Integer energy_level;
     private Integer intelligence;
+    private Integer affection_level;
 
     public String getName() {
         return name;
@@ -31,6 +32,10 @@ public class CatBreed {
         return temperament;
     }
 
+    public Integer getAffection_level() {
+        return affection_level;
+    }
+
     public Integer getEnergy_level() {
         return energy_level;
     }
@@ -38,5 +43,7 @@ public class CatBreed {
     public Integer getIntelligence() {
         return intelligence;
     }
+
+
 
 }

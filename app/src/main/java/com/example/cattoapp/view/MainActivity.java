@@ -1,8 +1,9 @@
-package com.example.cattoapp;
+package com.example.cattoapp.view;
 
+import com.example.cattoapp.model.OnItemClickListener;
+import com.example.cattoapp.R;
 import com.example.cattoapp.controller.MainController;
 import com.example.cattoapp.model.CatBreed;
-import com.squareup.picasso.Picasso;
 
 import android.app.Activity;
 import android.content.Context;
@@ -57,7 +58,7 @@ public class MainActivity extends Activity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         loader = findViewById(R.id.progressBar);
 
-        controller = new MainController(this);
+        controller = new MainController(this, getSharedPreferences("listcat", Context.MODE_PRIVATE));
         controller.onCreate();
 
 
@@ -119,12 +120,16 @@ public class MainActivity extends Activity {
                         Toast.makeText(getApplicationContext(), item.getName(), Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
+                        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                         intent.putExtra("detail_description",  item.getDescription());
                         intent.putExtra("detail_temperament",  item.getTemperament());
                         intent.putExtra("detail_name",  item.getName());
 
+                        intent.putExtra("detail_affection_level",  item.getAffection_level());
                         intent.putExtra("detail_energy_level",  item.getEnergy_level());
                         intent.putExtra("detail_intelligence",  item.getIntelligence());
+
 
                         getApplicationContext().startActivity(intent);
                     }
