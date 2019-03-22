@@ -130,7 +130,6 @@ public class MainActivity extends Activity {
                         intent.putExtra("detail_energy_level",  item.getEnergy_level());
                         intent.putExtra("detail_intelligence",  item.getIntelligence());
 
-
                         getApplicationContext().startActivity(intent);
                     }
                 });

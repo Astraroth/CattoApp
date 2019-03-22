@@ -128,11 +128,11 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView paw9 = findViewById(R.id.paw9);
         ImageView paw10 = findViewById(R.id.paw10);
 
-        /*ImageView paw11 = findViewById(R.id.paw11); //intelligence
+        ImageView paw11 = findViewById(R.id.paw11); //intelligence
         ImageView paw12 = findViewById(R.id.paw12);
         ImageView paw13 = findViewById(R.id.paw13);
         ImageView paw14 = findViewById(R.id.paw14);
-        ImageView paw15 = findViewById(R.id.paw15);*/
+        ImageView paw15 = findViewById(R.id.paw15);
 
 
 
@@ -205,7 +205,7 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
 
-        /*switch (intelligence) {
+        switch (intelligence) {
 
             case 1:
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw11);
@@ -217,9 +217,9 @@ public class DetailsActivity extends AppCompatActivity {
                 break;
 
             case 3:
-                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw6);
-                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw7);
-                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw8);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw11);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw12);
+                Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw13);
                 break;
 
             case 4:
@@ -237,7 +237,7 @@ public class DetailsActivity extends AppCompatActivity {
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw15);
                 break;
 
-        }*/
+        }
 
 }
 
@@ -245,20 +245,22 @@ public class DetailsActivity extends AppCompatActivity {
 
         if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")
                 && getIntent().hasExtra("detail_affection_level")
-                && getIntent().hasExtra("detail_energy_level")){
+                && getIntent().hasExtra("detail_energy_level")
+                && getIntent().hasExtra("detail_intelligence")){
 
             String detaildescription = getIntent().getStringExtra("detail_description");
             String detailtemperament = getIntent().getStringExtra("detail_temperament");
 
             Integer affection = getIntent().getIntExtra("detail_affection_level",0);
             Integer energy = getIntent().getIntExtra("detail_energy_level",0);
+            Integer intelligence = getIntent().getIntExtra("detail_intelligence",0);
 
-            SetText(detaildescription, detailtemperament, affection, energy);
+            SetText(detaildescription, detailtemperament, affection, energy, intelligence);
         }
 
     }
 
-    private void SetText(String detail_description, String detail_temperament, Integer aff, Integer ene){
+    private void SetText(String detail_description, String detail_temperament, Integer aff, Integer ene, Integer inte){
 
         TextView description = findViewById(R.id.description);
         description.setText(detail_description);
@@ -271,6 +273,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         TextView e = findViewById(R.id.energyvalue);
         e.setText(Integer.toString(ene));
+
+        TextView i = findViewById(R.id.intelligencevalue);
+        i.setText(Integer.toString(inte));
 
     }
 

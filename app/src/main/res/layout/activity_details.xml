@@ -212,7 +212,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/paw2"
                 app:layout_constraintTop_toBottomOf="@+id/description"
-                app:layout_constraintVertical_bias="0.129" />
+                app:layout_constraintVertical_bias="0.133" />
 
             <ImageView
                 android:id="@+id/paw4"
@@ -345,7 +345,102 @@
                 app:layout_constraintHorizontal_bias="0.023"
                 app:layout_constraintStart_toEndOf="@+id/paw9"
                 app:layout_constraintTop_toBottomOf="@+id/paw5"
-                app:layout_constraintVertical_bias="0.222" />
+                app:layout_constraintVertical_bias="0.21" />
+
+            <ImageView
+                android:id="@+id/paw11"
+                android:layout_width="35dp"
+                android:layout_height="37dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/pawvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.288"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paw6"
+                app:layout_constraintVertical_bias="0.295" />
+
+            <ImageView
+                android:id="@+id/paw12"
+                android:layout_width="35dp"
+                android:layout_height="37dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/pawvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/paw11"
+                app:layout_constraintTop_toBottomOf="@+id/paw8"
+                app:layout_constraintVertical_bias="0.28" />
+
+            <ImageView
+                android:id="@+id/paw13"
+                android:layout_width="35dp"
+                android:layout_height="37dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/pawvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/paw12"
+                app:layout_constraintTop_toBottomOf="@+id/paw5"
+                app:layout_constraintVertical_bias="0.637" />
+
+            <ImageView
+                android:id="@+id/paw14"
+                android:layout_width="35dp"
+                android:layout_height="37dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/pawvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/paw13"
+                app:layout_constraintTop_toBottomOf="@+id/paw9"
+                app:layout_constraintVertical_bias="0.292" />
+
+            <ImageView
+                android:id="@+id/paw15"
+                android:layout_width="35dp"
+                android:layout_height="37dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/pawvide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.023"
+                app:layout_constraintStart_toEndOf="@+id/paw14"
+                app:layout_constraintTop_toBottomOf="@+id/paw10"
+                app:layout_constraintVertical_bias="0.311" />
 
             <TextView
                 android:id="@+id/affectionvalue"
@@ -382,6 +477,24 @@
                 app:layout_constraintStart_toEndOf="@+id/paw10"
                 app:layout_constraintTop_toBottomOf="@+id/affectionvalue"
                 app:layout_constraintVertical_bias="0.296" />
+
+            <TextView
+                android:id="@+id/intelligencevalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/energyvalue"
+                app:layout_constraintVertical_bias="0.415" />
 
             <!--<ImageView
                 android:id="@+id/paw11"
