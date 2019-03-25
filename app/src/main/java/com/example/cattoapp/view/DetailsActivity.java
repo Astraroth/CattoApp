@@ -268,15 +268,6 @@ public class DetailsActivity extends AppCompatActivity {
         TextView temperament = findViewById(R.id.temperament);
         temperament.setText(detail_temperament);
 
-        TextView a = findViewById(R.id.affectionvalue);
-        a.setText(Integer.toString(aff));
-
-        TextView e = findViewById(R.id.energyvalue);
-        e.setText(Integer.toString(ene));
-
-        TextView i = findViewById(R.id.intelligencevalue);
-        i.setText(Integer.toString(inte));
-
     }
 
     //private void SetValues()

@@ -86,7 +86,6 @@ public class MainActivity extends Activity {
 
             if (shake > 10) {
                 ImageView background = findViewById(R.id.background);
-                //Picasso.with(getApplicationContext()).load(R.drawable.spacecatwpmin).into(background);
                 Animate();
             }
         }
@@ -101,6 +100,7 @@ public class MainActivity extends Activity {
 
         MediaPlayer shootingstars =  MediaPlayer.create(getApplicationContext(), R.raw.shooting_stars);
         shootingstars.start();
+
     }
 
 
@@ -120,7 +120,7 @@ public class MainActivity extends Activity {
                         Toast.makeText(getApplicationContext(), item.getName(), Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
-                        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                         intent.putExtra("detail_description",  item.getDescription());
                         intent.putExtra("detail_temperament",  item.getTemperament());
@@ -162,11 +162,13 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Random Kitty Image !", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), ImageActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(intent);
             }
         });
     }
-    ///////ANIMATION
+
+
     public void Animate() {
         ImageView animation = (ImageView) findViewById(R.id.spacecat);
         ImageView animation2 = (ImageView) findViewById(R.id.spacecat2);
@@ -174,11 +176,8 @@ public class MainActivity extends Activity {
         animation.setBackgroundResource(R.drawable.spacecat_anim);
         animation2.setBackgroundResource(R.drawable.spacecat_anim);
 
-
-
         final AnimationDrawable Spacecatanimation = (AnimationDrawable) animation.getBackground();
         final AnimationDrawable Spacecatanimation2 = (AnimationDrawable) animation2.getBackground();
-
 
         animation.setScaleX(0.5f);
         animation.setScaleY(0.4f);
@@ -216,15 +215,10 @@ public class MainActivity extends Activity {
                 Sound_Animate();
                 Spacecatanimation.start();
                 Spacecatanimation2.start();
-
-
             }
 
             @Override
             public void onAnimationEnd(Animation arg0) {
-                Toast.makeText(getApplicationContext(), "SpaceCat !", Toast.LENGTH_SHORT).show();
-
-
             }
 
             @Override
@@ -243,9 +237,5 @@ public class MainActivity extends Activity {
     public void hideLoader(){
         loader.setVisibility(View.GONE);
     }
-
-
-
-
 
 }
