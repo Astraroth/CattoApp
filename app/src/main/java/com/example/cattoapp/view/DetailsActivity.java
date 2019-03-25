@@ -50,7 +50,7 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/uUGt0UBzF.jpg",//devonrex
             "https://cdn2.thecatapi.com/images/KWVenr3Pq.jpg",//donksoy
             "https://www.mascotarios.org/wp-content/uploads/2011/07/dragon.jpg",//dragonli
-            "http://www.pethealthnetwork.com/sites/default/files/content/images/eqyptian-mau185646620.png",//egyptmau
+            "https://usercontent2.hubstatic.com/13691509_f520.jpg",//egyptmau
             "https://cdn2.thecatapi.com/images/YOjBThApG.jpg",//europburmese
             "https://cdn2.thecatapi.com/images/FCNqMC83P.jpg",//exotic
             "https://cdn2.thecatapi.com/images/gQggWSR5I.jpg",//havana
@@ -60,9 +60,9 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/165ok6ESN.jpg",//khao
             "https://cdn2.thecatapi.com/images/1TcC-kiI1.jpg",//korat
             "https://cdn.shopify.com/s/files/1/0997/4496/files/Kurilian_Bobtail_Cat_grande.png?v=1535134457.jpg",//kurilian
-            "http://catsplace.org/wp-content/uploads/2015/01/LaPerm-cat-breed.jpg",//laperm
+            "https://vetstreet.brightspotcdn.com/dims4/default/95f1ee7/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F38%2Fdd6c50a33e11e087a80050568d634f%2Ffile%2FLaPerm-5-645mk062311.jpg",//laperm
             "https://cdn2.thecatapi.com/images/PKblw2RPe.jpg",//mainecoon
-            "http://legionfront.me/wp-content/uploads/2018/06/malayan-cat-malay-man-catcher-how-it-works.jpg",//malayan
+            "https://phz8.petinsurance.com/-/media/all-phz-images/2016-images-breeds-850/burmese850.jpg",//malayan
             "https://cdn2.thecatapi.com/images/AoDtRhYcL.jpg",//manx
             "https://cdn2.thecatapi.com/images/8LxU2Gwmo.jpg",//munchkin
             "https://cdn2.thecatapi.com/images/OUfeISEoi.jpg",//nebelung
@@ -86,7 +86,7 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/6vPgXY9tb.jpg",//tonkinese
             "https://cdn2.thecatapi.com/images/Zi4jfH3c6.jpg",//toyger
             "https://cdn2.thecatapi.com/images/oR3LMBqEZ.jpg",//turkishangora
-            "http://pontus.mentalfloss.com/sites/default/files/turkishvanmama.jpg",//turkishvan
+            "https://careofdc.org/wp-content/uploads/2016/12/turkish-van-cat-adoption-poughkeepsie.jpg",//turkishvan
             "https://cdn2.thecatapi.com/images/LzVDEMYIv.jpg"//yorkchocolate
 
 
