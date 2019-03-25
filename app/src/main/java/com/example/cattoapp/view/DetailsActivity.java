@@ -110,11 +110,14 @@ public class DetailsActivity extends AppCompatActivity {
             }
         }
 
+        setPaws();
+    }
+
+    private void setPaws(){
 
         final Integer affectionlevel = getIntent().getIntExtra("detail_affection_level", 0); //affection  of selected cat
         final Integer energylevel = getIntent().getIntExtra("detail_energy_level", 0); //energy level of selected cat
         final Integer intelligence = getIntent().getIntExtra("detail_intelligence", 0); //intelligence  of selected cat
-
 
         ImageView paw1 = findViewById(R.id.paw1); //affection
         ImageView paw2 = findViewById(R.id.paw2);
@@ -168,7 +171,7 @@ public class DetailsActivity extends AppCompatActivity {
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw5);
                 break;
 
-            }
+        }
 
         switch (energylevel) {
 
@@ -239,8 +242,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         }
 
-}
 
+
+
+
+    }
     private void getIncomingIntent(){
 
         if(getIntent().hasExtra("detail_description")&& getIntent().hasExtra("detail_temperament")

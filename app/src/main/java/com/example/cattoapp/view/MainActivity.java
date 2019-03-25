@@ -53,7 +53,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Sound();
-        //Animate();
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         loader = findViewById(R.id.progressBar);
@@ -82,8 +81,6 @@ public class MainActivity extends Activity {
             float delta = acelVal-acelLast;
             shake = shake*0.9f + delta;
 
-
-
             if (shake > 10) {
                 ImageView background = findViewById(R.id.background);
                 Animate();
@@ -102,7 +99,6 @@ public class MainActivity extends Activity {
         shootingstars.start();
 
     }
-
 
     public void showList(List<CatBreed> list){
 
@@ -160,7 +156,7 @@ public class MainActivity extends Activity {
         playCatImage.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Random Kitty Image !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Random Kitty Image !", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), ImageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(intent);
