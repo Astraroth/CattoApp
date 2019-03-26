@@ -34,7 +34,7 @@ SplashScreen affichant les 2 chats de la développeuse : Shadow (en haut) et Lin
 ### Ecran Home
 
 Affiche la liste des chats, triés par race, ainsi que l'origine de chaque race.
-<br>Le bouton du haut joue des sons de chats aléatoirement et affiche un toast disant "Meow ! (Sound on)", dont 2 miaulements, un extrait de "Nyan Cat"et un extrait de "Piano Cat".
+<br>Le bouton du haut joue des sons de chats aléatoirement dont 2 miaulements, un extrait de "Nyan Cat"et un extrait de "Piano Cat",et affiche un toast disant "Meow ! (Sound on)", 
 
 <p align="center">
   <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553615480-screenshot-20190326-164444-catpplication-min.jpg">  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617250-screenshot-20190326-171859-catpplication-min.jpg">
@@ -52,7 +52,7 @@ L'affection, l'énergie et l'intelligence sont également notées sur 5 : chaque
 
 ### Image aléatoire de chats
 
-Après avoir cliqué sur le bouton de l'écran home en bas à droite, affiche une image aléatoire de chat ainsi qu'un toast disant :
+Après avoir cliqué sur le bouton de l'écran home en bas à droite, affiche une image aléatoire de chat ainsi qu'un toast disant
 "Random Kitty Image !".
 
 <p align="center">
