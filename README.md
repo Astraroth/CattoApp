@@ -63,7 +63,7 @@ Après avoir cliqué sur le bouton de l'écran home en bas à droite, affiche un
 
 Secouer le téléphone pour faire appraitre une animation ainsi qu'un extrait de "Shooting Stars".
 <p align="center">
-  <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619001-ezgif-com-video-to-gif-3-1-1.gif"> 
+  <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619517-ezgif-com-video-to-gif-4.gif"> 
 </p>
 
 
