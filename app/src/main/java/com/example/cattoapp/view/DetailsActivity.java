@@ -88,8 +88,6 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/oR3LMBqEZ.jpg",//turkishangora
             "https://careofdc.org/wp-content/uploads/2016/12/turkish-van-cat-adoption-poughkeepsie.jpg",//turkishvan
             "https://cdn2.thecatapi.com/images/LzVDEMYIv.jpg"//yorkchocolate
-
-
     };
 
 

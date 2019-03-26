@@ -4,6 +4,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filterable;
+import android.widget.Filter;
+
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,21 +15,26 @@ import com.example.cattoapp.model.OnItemClickListener;
 import com.example.cattoapp.R;
 import com.example.cattoapp.model.CatBreed;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements Filterable {
 
     private List<CatBreed> values;
     private final OnItemClickListener listener;
+    private List<CatBreed> exampleList;
+    private List<CatBreed> exampleListFull;
+
 
 
     public RecyclerViewAdapter(List<CatBreed> myDataset, OnItemClickListener listener) { //constructor
         values = myDataset;
         this.listener = listener;
+        exampleListFull = new ArrayList<>(values);
     }
 
     public void add(int position, CatBreed item) {
@@ -88,11 +96,45 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
                 listener.onItemClick(selectedCat);
-
             }
         });
     }
 
+    @Override
+    public Filter getFilter() {
+        return exampleFilter;
+    }
+
+    private Filter exampleFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<CatBreed> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(exampleListFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (CatBreed item : exampleListFull) {
+                    if (item.getName().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            values.clear();
+            values.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
 
 

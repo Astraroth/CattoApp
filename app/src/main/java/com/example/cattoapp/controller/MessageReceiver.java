@@ -22,6 +22,7 @@ public class MessageReceiver extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+
         super.onMessageReceived(remoteMessage);
 
         final String title = remoteMessage.getData().get("title");

@@ -24,6 +24,7 @@ public class SplashScreenActivity extends Activity {
             public void run() {
 
                 Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
             }

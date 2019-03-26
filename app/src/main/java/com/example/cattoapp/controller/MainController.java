@@ -41,6 +41,7 @@ public class MainController {
     public void onCreate() {
 
         if(sharedPreferences.contains(key)){
+
             mainActivity.showLoader();
             String cache = sharedPreferences.getString(key, null);
             Type listType = new TypeToken<List<CatBreed>>(){}.getType();
@@ -48,9 +49,9 @@ public class MainController {
             mainActivity.showList(listcatbreed);
             mainActivity.hideLoader();
 
-
         }
         else{
+
             mainActivity.showLoader();
 
             Gson gson = new GsonBuilder().setLenient().create();
@@ -72,11 +73,7 @@ public class MainController {
                     Gson gson1 = new Gson();
                     String cache = gson1.toJson(listCatBreed);
 
-                    sharedPreferences
-                            .edit()
-                            .putString(key, cache)
-                            .apply();
-
+                    sharedPreferences.edit().putString(key, cache).apply();
 
                     mainActivity.showList(listCatBreed);
                     mainActivity.hideLoader();
