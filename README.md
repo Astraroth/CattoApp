@@ -45,7 +45,7 @@ Affiche la liste des chats, triés par race, ainsi que l'origine de chaque race.
 ### Ecran du détail des chats
 
 Ecran scrollable qui affiche le tempérament et la description de chaque chat.
-L'affection, l'énergie et l'intelligence sont également notées sur 5 : chaque patte remplie en noir équivaut à un point.
+<br>L'affection, l'énergie et l'intelligence sont également notées sur 5 : chaque patte remplie en noir équivaut à un point.
 
 <p align="center">
   <img width="200" height="500" src = "https://image.noelshack.com/fichiers/2019/13/2/1553616363-screenshot-20190326-170116-catpplication-min.jpg">
@@ -62,7 +62,7 @@ Après avoir cliqué sur le bouton de l'écran home en bas à droite, affiche un
 
 ### Barre de recherche
 
-Saisir partiellement ou en entier le nom du chat recherché dans la barre de recherche pour que les résultats correspondant s'affichent à la place de la liste complète.
+Saisir partiellement ou en entier le nom du chat recherché dans la barre de recherche pour que les résultats correspondants s'affichent à la place de la liste complète.
 
 <p align="center">
   <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631713-screenshot-20190326-211904-catpplication-min.jpg"> 
