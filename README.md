@@ -65,7 +65,7 @@ Après avoir cliqué sur le bouton de l'écran home en bas à droite, affiche un
 Saisir partiellement ou en entier le nom du chat recherché dans la barre de recherche pour que les résultats correspondants s'affichent à la place de la liste complète.
 
 <p align="center">
-  <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631713-screenshot-20190326-211904-catpplication-min.jpg"> 
+  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631713-screenshot-20190326-211904-catpplication-min.jpg"> 
 </p>
 
 
@@ -73,16 +73,5 @@ Saisir partiellement ou en entier le nom du chat recherché dans la barre de rec
 
 Secouer le téléphone pour faire appraitre une animation et lancer un extrait de "Shooting Stars" !
 
-<p align="center">
-  <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619517-ezgif-com-video-to-gif-4.gif"> 
+<p align="cent200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619517-ezgif-com-video-to-gif-4.gif"> 
 </p>
-
-
-
-
-
-
-
-
-
-
