@@ -36,6 +36,7 @@ SplashScreen affichant les 2 chats de la développeuse : Shadow (en haut) et Lin
 
 Affiche la liste des chats, triés par race, ainsi que l'origine de chaque race.
 <br>Le bouton du haut joue aléatoirement des sons de chats parmis 4 sons, dont 2 miaulements, un extrait de "Nyan Cat" et un extrait de "Piano Cat", et affiche un toast disant "Meow ! (Sound on)".
+<br>Le bouton du bas permet de passer à l'activité où les images aléatoires de chats sont affichées.
 
 <p align="center">
   <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631481-screenshot-20190326-211443-catpplication-min.jpg">  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631844-screenshot-20190326-212243-catpplication-min.jpg">
