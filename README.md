@@ -54,7 +54,7 @@ Ecran scrollable qui affiche le tempérament et la description de chaque chat.
 
 ### Image aléatoire de chats
 
-Après avoir cliqué sur le bouton de l'écran home en bas à droite, affiche une image aléatoire de chat ainsi qu'un toast disant
+Après avoir cliqué sur le bouton en bas à droite de l'écran home , affiche une image aléatoire de chat ainsi qu'un toast disant
 "Random Kitty Image !".
 
 <p align="center">
