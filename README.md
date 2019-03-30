@@ -6,7 +6,7 @@ Cette application utilise l'API "TheCatApi".
 
 ## Consignes respectées :
 
-Le projet conprend : 
+Le projet comprend : 
 - 4 activités : SplashScreen, liste des chats, détails des chats, image aléatoire de chats
 - Affichage d'une liste dans un RecyclerView
 - Affichage du détail d'un item de la liste
