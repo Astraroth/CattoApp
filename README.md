@@ -58,7 +58,7 @@ Après avoir cliqué sur le bouton en bas à droite de l'écran home , affiche u
 "Random Kitty Image !".
 
 <p align="center">
-  <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617576-screenshot-20190326-172437-catpplication-min.jpg"> <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617249-screenshot-20190326-171810-catpplication-min.jpg">
+  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617576-screenshot-20190326-172437-catpplication-min.jpg"> <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617249-screenshot-20190326-171810-catpplication-min.jpg">
 </p>
 
 ### Barre de recherche
@@ -75,5 +75,5 @@ Saisir partiellement ou en entier le nom du chat recherché dans la barre de rec
 Secouer le téléphone pour faire appraitre une animation et lancer un extrait de "Shooting Stars" !
 
 <p align="center">
- <img width="150" height="300" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619517-ezgif-com-video-to-gif-4.gif">
+ <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619517-ezgif-com-video-to-gif-4.gif">
 </p>
