@@ -83,7 +83,7 @@ Saisir partiellement ou en entier le nom du chat recherché dans la barre de rec
 
 ### Notifications
 
-Il ets possible de recevoir des notifications !
+Il est possible de recevoir des notifications !
 
 <p align="center">
  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/14/1/1554144941-screenshot-20190401-205228-samsung-experience-home-min.jpg">
