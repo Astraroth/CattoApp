@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             float delta = acelVal-acelLast;
             shake = shake*0.9f + delta;
 
-            if (shake > 10) {
+            if (shake > 8) {
                 ImageView background = findViewById(R.id.background);
                 Animate();
             }
