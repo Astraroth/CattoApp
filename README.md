@@ -11,7 +11,7 @@ Le projet comprend :
 - Affichage d'une **liste dans un RecyclerView**
 - Affichage du **détail d'un item de la liste**
 - Appel à une **API Rest**
-- Stockage des **données en cache*
+- Stockage des **données en cache**
 - Architecture **MVC** (Modèle - Vue - Controlleur)
 - **Notifications Push** : via Firebase
 - **GitFlow** : branches master et develop
