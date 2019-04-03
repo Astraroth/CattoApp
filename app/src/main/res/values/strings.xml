@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">CattoApp</string>
+    <string name="app_name">Catpplication</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="image_txt">Enjoy the kitty !</string>
 </resources>

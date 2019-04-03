@@ -2,7 +2,14 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#000404</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#040C49</color>
 
     <color name="rowTextcolor">#000000</color>
+    <color name="detailBackground">#FDF9F9</color>
+
+    <color name="buttonBackground">#000000</color>
+
+    <color name="imageActivityBackground">#3F51B5</color>
+
+    <color name="imagetxt">#000000</color>
 </resources>

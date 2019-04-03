@@ -1,6 +1,5 @@
-package com.example.cattoapp;
+package com.example.cattoapp.model;
 
-import com.example.cattoapp.model.CatBreed;
 
 public interface OnItemClickListener {
     void onItemClick(CatBreed item);

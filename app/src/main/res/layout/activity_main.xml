@@ -2,12 +2,14 @@
 
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/catswall">
 
-
+    <include
+        layout="@layout/toolbar_layout"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
@@ -16,6 +18,14 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
@@ -23,15 +33,46 @@
         android:layout_height="wrap_content"
         android:visibility="visible" />
 
-    <!--<android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="369dp"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/buttonSound"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/catmeow2"
+        app:backgroundTint="@color/buttonBackground" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/buttonImage"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:clickable="true"
-        android:src="@drawable/ic_add_black_24dp"
-        app:backgroundTint="@color/buttonBackground" />-->
+        android:src="@drawable/catimagebutton"
+        app:backgroundTint="@color/buttonBackground" />
+
+    <ImageView
+        android:id="@+id/spacecat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+    <ImageView
+    android:id="@+id/spacecat2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/spacecat3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
 
 
 

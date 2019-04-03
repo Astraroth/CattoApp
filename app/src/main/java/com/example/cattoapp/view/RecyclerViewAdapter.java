@@ -1,38 +1,32 @@
-package com.example.cattoapp;
+package com.example.cattoapp.view;
 
-import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filterable;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.cattoapp.model.OnItemClickListener;
+import com.example.cattoapp.R;
 import com.example.cattoapp.model.CatBreed;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.lang.Object;
-import android.graphics.Bitmap;
-import android.widget.Toast;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
-
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements Filterable {
 
     private List<CatBreed> values;
     private final OnItemClickListener listener;
-    private Context context;
+    private List<CatBreed> exampleList;
+    private List<CatBreed> exampleListFull;
 
     public RecyclerViewAdapter(List<CatBreed> myDataset, OnItemClickListener listener) { //constructor
         values = myDataset;
         this.listener = listener;
+        exampleListFull = new ArrayList<>(values);
     }
 
     public void add(int position, CatBreed item) {
@@ -48,17 +42,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return values.size();
     }
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        // each data item is just a string in this case
         CircleImageView circleImageView;
         public TextView txtName;
         public TextView txtName2;
         public RelativeLayout parent_layout;
         public View layout;
+        public ImageView catimage;
 
 
         public ViewHolder(View v) {
@@ -67,11 +58,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             txtName = (TextView) v.findViewById(R.id.firstLine);
             txtName2 = (TextView) v.findViewById(R.id.secondLine);
             parent_layout = (RelativeLayout) v.findViewById(R.id.parent_layout);
+            catimage = (ImageView) v.findViewById(R.id.catImage);
         }
-
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
@@ -81,34 +71,60 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return holder;
     }
 
-
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        //get element from your dataset at this position
-        //replace the contents of the view with that element
         final CatBreed selectedCat = values.get(position);
         final String name = selectedCat.getName();
-        holder.txtName.setText(name);
-
         final String origin = selectedCat.getOrigin();
+
+        holder.txtName.setText(name);
         holder.txtName2.setText(origin);
 
-        Log.d("ON BIND", "called");
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listener.onItemClick(selectedCat);
-
             }
         });
     }
 
+    @Override
+    public Filter getFilter() {
+        return exampleFilter;
+    }
 
+    private Filter exampleFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<CatBreed> filteredList = new ArrayList<>();
 
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(exampleListFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
 
+                for (CatBreed item : exampleListFull) {
+                    if (item.getName().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
 
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            values.clear();
+            values.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 }
 
 

@@ -59,11 +59,9 @@
             android:layout_marginTop="23dp"
 
             android:layout_marginRight="9dp"
-
-            android:layout_marginBottom="0dp"
             android:layout_toRightOf="@id/circleimage"
 
-            android:shadowColor="#FFFFFF"
+            android:shadowColor="#dfdfdf"
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="30"
