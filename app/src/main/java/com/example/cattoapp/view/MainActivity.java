@@ -4,18 +4,11 @@ import com.example.cattoapp.model.OnItemClickListener;
 import com.example.cattoapp.R;
 import com.example.cattoapp.controller.MainController;
 import com.example.cattoapp.model.CatBreed;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
-
-
-
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -24,20 +17,16 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
 import android.view.MenuInflater;
-
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import java.util.List;
 import java.util.Random;
-
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -54,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
     private Integer counter = 0;
     private Random rand = new Random();
     private List<CatBreed> exampleList;
-
 
     private SensorManager sm;
     private float acelVal;
@@ -76,14 +64,13 @@ public class MainActivity extends AppCompatActivity {
         controller = new MainController(this, getSharedPreferences("listcat", Context.MODE_PRIVATE));
         controller.onCreate();
 
-
         sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sm.registerListener(sensorListener, sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
         acelVal = SensorManager.GRAVITY_EARTH;
         acelLast = SensorManager.GRAVITY_EARTH;
         shake = 0.00f;
-
     }
+
     private final SensorEventListener sensorListener = new SensorEventListener() {
         @Override
 
@@ -105,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
         }
     };
 
@@ -113,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
 
         MediaPlayer shootingstars =  MediaPlayer.create(getApplicationContext(), R.raw.shooting_stars);
         shootingstars.start();
-
     }
 
     public void showList(List<CatBreed> list){
@@ -121,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
 
         mAdapter = new RecyclerViewAdapter(list,
 
@@ -180,7 +164,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public void Animate() {
         ImageView animation = (ImageView) findViewById(R.id.spacecat);
         ImageView animation2 = (ImageView) findViewById(R.id.spacecat2);
@@ -201,7 +184,6 @@ public class MainActivity extends AppCompatActivity {
         animation2.setX(-200);
         animation2.setY(800);
 
-
         TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
         TranslateAnimation translateAnimation2 = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
@@ -216,8 +198,6 @@ public class MainActivity extends AppCompatActivity {
         translateAnimation2.setDuration(4000);
         translateAnimation2.setFillEnabled(true);
         translateAnimation2.setFillAfter(true);
-
-
 
         translateAnimation2.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -248,7 +228,6 @@ public class MainActivity extends AppCompatActivity {
     public void hideLoader(){
         loader.setVisibility(View.GONE);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

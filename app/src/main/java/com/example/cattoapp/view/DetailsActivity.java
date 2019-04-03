@@ -3,10 +3,8 @@ package com.example.cattoapp.view;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.cattoapp.R;
 import com.squareup.picasso.Picasso;
 
@@ -90,7 +88,6 @@ public class DetailsActivity extends AppCompatActivity {
             "https://cdn2.thecatapi.com/images/LzVDEMYIv.jpg"//yorkchocolate
     };
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -135,8 +132,6 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView paw14 = findViewById(R.id.paw14);
         ImageView paw15 = findViewById(R.id.paw15);
 
-
-
         switch (affectionlevel) {
 
             case 1:
@@ -168,7 +163,6 @@ public class DetailsActivity extends AppCompatActivity {
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw4);
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw5);
                 break;
-
         }
 
         switch (energylevel) {
@@ -237,13 +231,7 @@ public class DetailsActivity extends AppCompatActivity {
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw14);
                 Picasso.with(getApplicationContext()).load(R.drawable.pawblack).into(paw15);
                 break;
-
         }
-
-
-
-
-
     }
     private void getIncomingIntent(){
 
@@ -261,7 +249,6 @@ public class DetailsActivity extends AppCompatActivity {
 
             SetText(detaildescription, detailtemperament, affection, energy, intelligence);
         }
-
     }
 
     private void SetText(String detail_description, String detail_temperament, Integer aff, Integer ene, Integer inte){
@@ -271,16 +258,12 @@ public class DetailsActivity extends AppCompatActivity {
 
         TextView temperament = findViewById(R.id.temperament);
         temperament.setText(detail_temperament);
-
     }
-
-    //private void SetValues()
 
    public void showImg(String url){
 
         ImageView image = findViewById(R.id.detailimage);
         Picasso.with(getApplicationContext())
             .load(url).placeholder(R.drawable.nyancaticon).into(image);
-}
-
+    }
 }

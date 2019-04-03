@@ -5,12 +5,10 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
-
 import com.example.cattoapp.R;
 import com.example.cattoapp.view.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
 
 public class MessageReceiver extends FirebaseMessagingService {
     private static final int REQUEST_CODE = 1;
@@ -27,7 +25,6 @@ public class MessageReceiver extends FirebaseMessagingService {
 
         final String title = remoteMessage.getData().get("title");
         final String message = remoteMessage.getData().get("body");
-
         showNotifications(title, message);
     }
 

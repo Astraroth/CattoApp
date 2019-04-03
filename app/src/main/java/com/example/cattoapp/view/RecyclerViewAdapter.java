@@ -6,21 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filterable;
 import android.widget.Filter;
-
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.example.cattoapp.model.OnItemClickListener;
 import com.example.cattoapp.R;
 import com.example.cattoapp.model.CatBreed;
-
 import java.util.ArrayList;
 import java.util.List;
-
-
 import de.hdodenhof.circleimageview.CircleImageView;
-
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements Filterable {
 
@@ -28,8 +22,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private final OnItemClickListener listener;
     private List<CatBreed> exampleList;
     private List<CatBreed> exampleListFull;
-
-
 
     public RecyclerViewAdapter(List<CatBreed> myDataset, OnItemClickListener listener) { //constructor
         values = myDataset;
@@ -68,7 +60,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             parent_layout = (RelativeLayout) v.findViewById(R.id.parent_layout);
             catimage = (ImageView) v.findViewById(R.id.catImage);
         }
-
     }
 
     @Override
@@ -79,7 +70,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
-
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
@@ -135,10 +125,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             notifyDataSetChanged();
         }
     };
-
-
-
-
 }
 
 

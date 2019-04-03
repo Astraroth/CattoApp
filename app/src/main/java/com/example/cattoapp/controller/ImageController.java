@@ -2,15 +2,12 @@
 package com.example.cattoapp.controller;
 
 import android.util.Log;
-
 import com.example.cattoapp.view.ImageActivity;
 import com.example.cattoapp.model.CatImage;
 import com.example.cattoapp.model.CatRestApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -19,9 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ImageController {
 
-    //private final DetailsActivity detailsActivity;
     private final ImageActivity imageActivity;
-
     private static ImageController instance = null;
 
     //Exemple Singleton
@@ -45,7 +40,6 @@ public class ImageController {
                 .baseUrl("https://api.thecatapi.com/v1/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-
 
         CatRestApi catRestApi = retrofit.create(CatRestApi.class);
         Call<List<CatImage>> call2 = catRestApi.getCatImageById();

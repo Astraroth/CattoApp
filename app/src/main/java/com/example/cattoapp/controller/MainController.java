@@ -2,17 +2,14 @@ package com.example.cattoapp.controller;
 
 import android.content.SharedPreferences;
 import android.util.Log;
-
 import com.example.cattoapp.model.CatRestApi;
 import com.example.cattoapp.view.MainActivity;
 import com.example.cattoapp.model.CatBreed;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-
 import java.lang.reflect.Type;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -50,6 +47,7 @@ public class MainController {
             mainActivity.hideLoader();
 
         }
+
         else{
 
             mainActivity.showLoader();
@@ -69,7 +67,6 @@ public class MainController {
                 public void onResponse(Call<List<CatBreed>> call, Response<List<CatBreed>> response) {
 
                     List<CatBreed> listCatBreed = response.body();
-
                     Gson gson1 = new Gson();
                     String cache = gson1.toJson(listCatBreed);
 
@@ -77,8 +74,6 @@ public class MainController {
 
                     mainActivity.showList(listCatBreed);
                     mainActivity.hideLoader();
-
-
                 }
 
                 @Override
@@ -86,9 +81,7 @@ public class MainController {
                     Log.d("Erreur", "API ERROR");
                 }
             });
-
         }
     }
-
 }
 

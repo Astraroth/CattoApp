@@ -6,7 +6,6 @@ import com.example.cattoapp.R;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SplashScreenActivity extends Activity {
