@@ -50,7 +50,7 @@ Ecran **scrollable** qui affiche le tempérament et la description de chaque cha
 <br>L'affection, l'énergie et l'intelligence sont également notées sur 5 : chaque patte remplie en noir équivaut à un point.
 
 <p align="center">
-  <img width="200" height="500" src = "https://image.noelshack.com/fichiers/2019/13/2/1553616363-screenshot-20190326-170116-catpplication-min.jpg">
+  <img width="200" height="500" src = "https://image.noelshack.com/fichiers/2019/13/2/1553616363-screenshot-20190326-170116-catpplication-min.jpg"> <img width="200" height="500" src = "https://image.noelshack.com/fichiers/2019/14/5/1554455030-screenshot-20190405-110017-catpplication-min.jpg">
 </p>
 
 ### Image aléatoire de chats
