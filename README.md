@@ -1,10 +1,11 @@
 # Catpplication, the purrfect app for cats lovers !
+*By Alexandra RESSE - 34*
 
 ## Présentation
 Projet démontrant l'utilisation d'une **RecyclerView** et d'un appel à une **API Rest** dans une application Android codée en **Java**.
-Cette application utilise l'API **"TheCatApi"**.
+<br>Cette application utilise l'API **"TheCatApi"**.
 
-## Consignes respectées :
+## Consignes respectées
 
 Le projet comprend : 
 - **4 activités** : SplashScreen, liste des chats, détails des chats, image aléatoire de chats
@@ -16,7 +17,7 @@ Le projet comprend :
 - **Notifications Push** : via Firebase
 - **GitFlow** : branches master et develop
 - Fonctionnalités supplémentaires : 
-  - Ecran des détails **scrollable**
+  - Écran des détails **scrollable**
   - **Barre de recherche** par race
   - Bouton jouant un **son aléatoire**
   - Bouton passant à une **autre activité**, qui affiche des **images aléatoires** de chats
@@ -33,7 +34,7 @@ Le projet comprend :
   <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553613642-screenshot-20190326-160428-catpplication-1-min.jpg">
 </p>
 
-### Ecran Home
+### Écran Home
 
 Affiche la **liste des chats**, triés par race, ainsi que l'origine de chaque race.
 <br>Le bouton du haut **joue aléatoirement des sons de chats parmis 4 sons**, dont 2 miaulements, un extrait de "Nyan Cat" et un extrait de "Piano Cat", et affiche un toast disant "Meow ! (Sound on)".
@@ -44,9 +45,9 @@ Affiche la **liste des chats**, triés par race, ainsi que l'origine de chaque r
 </p>
 
 
-### Ecran du détail des chats
+### Écran du détail des chats
 
-Ecran **scrollable** qui affiche le tempérament et la description de chaque chat.
+Écran **scrollable** qui affiche le tempérament et la description de chaque chat.
 <br>L'affection, l'énergie et l'intelligence sont également notées sur 5 : chaque patte remplie en noir équivaut à un point.
 
 <p align="center">
@@ -83,9 +84,11 @@ Saisir partiellement ou en entier le nom du chat recherché dans la **barre de r
 
 ### Notifications
 
-Il est possible de recevoir des **notifications** !
+Il est possible d'envoyer et de recevoir des **notifications** !
 
 <p align="center">
  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/14/1/1554144941-screenshot-20190401-205228-samsung-experience-home-min.jpg">
 </p>
+
+
 
