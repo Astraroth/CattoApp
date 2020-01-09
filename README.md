@@ -31,7 +31,7 @@ Le projet comprend :
 <br>Au bout de 3 secondes, l'application passe automatiquement à l'écran Home.
 
 <p align="center">
-  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553613642-screenshot-20190326-160428-catpplication-1-min.jpg">
+  <img width="200" height="400" src = "https://zupimages.net/up/20/02/h811.jpg">
 </p>
 
 ### Écran Home
