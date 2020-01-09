@@ -41,7 +41,7 @@ Affiche la **liste des chats**, triés par race, ainsi que l'origine de chaque r
 <br>Le bouton du bas permet de **passer à l'activité où les images aléatoires de chats sont affichées**.
 
 <p align="center">
-  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631481-screenshot-20190326-211443-catpplication-min.jpg">  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631844-screenshot-20190326-212243-catpplication-min.jpg">
+  <img width="200" height="400" src = "https://zupimages.net/up/20/02/k37q.jpg">  <img width="200" height="400" src = "https://zupimages.net/up/20/02/c70g.jpg">
 </p>
 
 
@@ -51,7 +51,7 @@ Affiche la **liste des chats**, triés par race, ainsi que l'origine de chaque r
 <br>L'affection, l'énergie et l'intelligence sont également notées sur 5 : chaque patte remplie en noir équivaut à un point.
 
 <p align="center">
-  <img width="200" height="500" src = "https://image.noelshack.com/fichiers/2019/13/2/1553616363-screenshot-20190326-170116-catpplication-min.jpg"> <img width="200" height="500" src = "https://image.noelshack.com/fichiers/2019/14/5/1554455030-screenshot-20190405-110017-catpplication-min.jpg">
+  <img width="200" height="500" src = "https://zupimages.net/up/20/02/pk3h.jpg"> <img width="200" height="500" src = "https://zupimages.net/up/20/02/orqq.jpg">
 </p>
 
 ### Image aléatoire de chats
@@ -60,7 +60,7 @@ Après avoir cliqué sur le bouton en bas à droite de l'écran home , affiche u
 "Random Kitty Image !".
 
 <p align="center">
-  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617576-screenshot-20190326-172437-catpplication-min.jpg"> <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553617249-screenshot-20190326-171810-catpplication-min.jpg">
+  <img width="200" height="400" src = "https://zupimages.net/up/20/02/r61q.jpg"> <img width="200" height="400" src = "https://zupimages.net/up/20/02/15xs.jpg">
 </p>
 
 
@@ -69,7 +69,7 @@ Après avoir cliqué sur le bouton en bas à droite de l'écran home , affiche u
 **Secouer** le téléphone pour faire **appraitre une animation et lancer un extrait de "Shooting Stars"** !
 
 <p align="center">
- <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553619517-ezgif-com-video-to-gif-4.gif">
+ <img width="200" height="400" src = "https://zupimages.net/up/20/02/stin.gif">
 </p>
 
 
@@ -78,17 +78,14 @@ Après avoir cliqué sur le bouton en bas à droite de l'écran home , affiche u
 Saisir partiellement ou en entier le nom du chat recherché dans la **barre de recherche** pour que les résultats correspondants s'affichent à la place de la liste complète.
 
 <p align="center">
-  <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/13/2/1553631713-screenshot-20190326-211904-catpplication-min.jpg"> 
+  <img width="200" height="400" src = "https://zupimages.net/up/20/02/u6h0.jpg"> 
 </p>
 
 
 ### Notifications
 
-Il est possible d'envoyer et de recevoir des **notifications** !
+Il est aussi possible d'envoyer et de recevoir des **notifications** !
 
 <p align="center">
- <img width="200" height="400" src = "https://image.noelshack.com/fichiers/2019/14/1/1554144941-screenshot-20190401-205228-samsung-experience-home-min.jpg">
+ <img width="200" height="400" src = "https://zupimages.net/up/20/02/bjtu.jpg">
 </p>
-
-
-
